@@ -21,7 +21,7 @@ body {
 }
 
 .hero-bg {
-  background-image: url('./assets/new_hero.jpg');
+  background-image: url('https://i.ibb.co/Dk88psm/new-hero.jpg');
   background-size: cover;
   background-position: center;
 }
