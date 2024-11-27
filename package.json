@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "npm run next",
-    "start": "concurrently \"npm run next-start\" \"npm run node-server\"",
+    "start": "npm run next-start",
+    "build": "next build",
     "next": "next dev",
     "next-start": "next start",
-    "node-server": "node server.js",
-    "python-server": "python server.py",
     "lint": "next lint"
   },
   "dependencies": {

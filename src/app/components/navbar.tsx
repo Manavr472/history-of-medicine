@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import Link from 'next/link'
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,12 +10,12 @@ const Header: React.FC = () => {
     };
 
     return (
-        <header className="container flex justify-between items-center p-8 h-24 mx-auto relative z-50">
+        <div className="container flex justify-between items-center p-8 h-24 mx-auto relative z-50">
             <div className="text-lg font-bold">Dummy Logo</div>
             <nav className="hidden md:flex space-x-4">
-                <a href="/" className="text-xl hover:text-yellow-500 font-semibold">Home</a>
-                <a href="/blog" className="text-xl hover:text-yellow-500 font-semibold">Blog</a>
-                <a href="#contact" className="text-xl hover:text-yellow-500 font-semibold">Contact</a>
+                <Link href="#home" className="text-xl hover:text-yellow-500 font-semibold">Home</Link>
+                <Link href="#blog" className="text-xl hover:text-yellow-500 font-semibold">Blog</Link>
+                <Link href="#contact" className="text-xl hover:text-yellow-500 font-semibold">Contact</Link>
             </nav>
             <div className="md:hidden">
                 <button onClick={toggleMenu} className="focus:outline-none">
@@ -25,12 +26,12 @@ const Header: React.FC = () => {
             </div>
             {isOpen && (
                 <nav className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 md:hidden z-50">
-                    <a href="/" className="hover:text-yellow-500 font-semibold">Home</a>
-                    <a href="/blog" className="hover:text-yellow-500 font-semibold">Blog</a>
-                    <a href="#contact" className="hover:text-yellow-500 font-semibold">Contact</a>
+                    <Link href="#home" className="hover:text-yellow-500 font-semibold">Home</Link>
+                    <Link href="#blog" className="hover:text-yellow-500 font-semibold">Blog</Link>
+                    <Link href="#contact" className="hover:text-yellow-500 font-semibold">Contact</Link>
                 </nav>
             )}
-        </header>
+        </div>
     );
 };
 

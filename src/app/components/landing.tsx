@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
-import Models from './models';
 
 const Landing: React.FC = () => {
     const controls = useAnimation();
@@ -82,7 +81,6 @@ const Landing: React.FC = () => {
                 </div>
             </motion.div>
         </div>
-        {/* <Models /> */}
         <div ref={ref1} className="container mx-auto mt-20 pd-8">
             <motion.div
                 initial="hidden"

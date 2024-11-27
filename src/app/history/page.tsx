@@ -81,45 +81,45 @@ const doctors = [
     }
 ];
 
-const HistoryPage: React.FC = () => {
+const history: React.FC = () => {
     return (
         <><div className="p-4 sm:p-8 rounded-lg bg-gray-800 dark:bg-gray-800 bg-white dark:text-white text-black">
             <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">History of Doctors Contributed in Knee Surgery</h1>
             <div className="overflow-x-auto">
-            <table className="min-w-full border border-gray-700 dark:border-gray-700 border-gray-300">
-            <thead>
-            <tr className='bg-gray-700 dark:bg-gray-700 bg-gray-300'>
-            <th className="py-2 px-4 border border-gray-700 dark:border-gray-700 border-gray-300">Image</th>
-            <th className="py-2 px-4 border border-gray-700 dark:border-gray-700 border-gray-300">Name</th>
-            <th className="py-2 px-4 border border-gray-700 dark:border-gray-700 border-gray-300 hidden sm:table-cell">Contribution</th>
-            </tr>
-            </thead>
-            <tbody>
-            {doctors.map((doctor, index) => (
-            <tr key={index} className="hover:bg-gray-600 dark:hover:bg-gray-600 hover:bg-gray-200 text-center border border-gray-700 dark:border-gray-700 border-gray-300">
-            <td className="py-2 px-4 flex justify-center items-center">
-            <div className="flex justify-center items-center w-full h-full min-h-[100px]">
-            <img src={doctor.image} alt={doctor.name} className="w-24 h-34 sm:w-32 sm:h-42 md:w-40 md:h-50 lg:w-48 lg:h-58 object-contain self-center" />
+                <table className="min-w-full border border-gray-700 dark:border-gray-700 border-gray-300">
+                    <thead>
+                        <tr className='bg-gray-700 dark:bg-gray-700 bg-gray-300'>
+                            <th className="py-2 px-4 border border-gray-700 dark:border-gray-700 border-gray-300">Image</th>
+                            <th className="py-2 px-4 border border-gray-700 dark:border-gray-700 border-gray-300">Name</th>
+                            <th className="py-2 px-4 border border-gray-700 dark:border-gray-700 border-gray-300 hidden sm:table-cell">Contribution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {doctors.map((doctor, index) => (
+                            <tr key={index} className="hover:bg-gray-600 dark:hover:bg-gray-600 hover:bg-gray-200 text-center border border-gray-700 dark:border-gray-700 border-gray-300">
+                                <td className="py-2 px-4 flex justify-center items-center">
+                                    <div className="flex justify-center items-center w-full h-full min-h-[100px]">
+                                        <img src={doctor.image} alt={doctor.name} className="w-24 h-34 sm:w-32 sm:h-42 md:w-40 md:h-50 lg:w-48 lg:h-58 object-contain self-center" />
+                                    </div>
+                                </td>
+                                <td className="py-2 px-4 text-center align-middle border border-gray-700 dark:border-gray-700 border-gray-300">
+                                    <div>{doctor.name}</div>
+                                    <div>{doctor.year}</div>
+                                    <div className="sm:hidden">
+                                        <details>
+                                            <summary className="cursor-pointer">Contribution</summary>
+                                            <p>{doctor.contribution}</p>
+                                        </details>
+                                    </div>
+                                </td>
+                                <td className="py-2 px-4 text-center align-middle border border-gray-700 dark:border-gray-700 border-gray-300 hidden sm:table-cell">{doctor.contribution}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
-            </td>
-            <td className="py-2 px-4 text-center align-middle border border-gray-700 dark:border-gray-700 border-gray-300">
-            <div>{doctor.name}</div>
-            <div>{doctor.year}</div>
-            <div className="sm:hidden">
-            <details>
-            <summary className="cursor-pointer">Contribution</summary>
-            <p>{doctor.contribution}</p>
-            </details>
-            </div>
-            </td>
-            <td className="py-2 px-4 text-center align-middle border border-gray-700 dark:border-gray-700 border-gray-300 hidden sm:table-cell">{doctor.contribution}</td>
-            </tr>
-            ))}
-            </tbody>
-            </table>
-        </div>
         </div></>
     );
 };
 
-export default HistoryPage;
+export default history;
