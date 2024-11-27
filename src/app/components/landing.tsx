@@ -51,7 +51,7 @@ const Landing: React.FC = () => {
             >
                 <h2 className="text-4xl font-bold mb-4">Discover ItihisaXR</h2>
                 <p className="text-lg mb-6">ItihisaXR is committed to revolutionizing education in the medical field by showcasing the history of implants through augmented reality. Our platform allows users to engage with 3D models, making learning interactive and accessible.</p>
-                <div className="counters grid grid-cols-2 gap-4">
+                <div className="counters grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div ref={usersRef} className="counter text-center mt-3">
                         <h3 className="text-3xl text-left font-semibold">{usersInView && <CountUp end={1000} duration={5} />} Users</h3>
                         <p className="text-s text-left mt-3">Since our inception, we have reached over 5000 users, providing them with a unique learning experience that bridges technology and education.</p>
@@ -89,7 +89,7 @@ const Landing: React.FC = () => {
             >
                 <h2 className="text-4xl font-bold mb-8 text-center">Latest Articles</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="article flex mt-8 ">
+                    <div className="article flex mt-8 pl-4">
                         <div className="w-1/3 overflow-hidden">
                             <img src="https://10web-site.ai/133/wp-content/uploads/sites/145/2024/11/tenweb_media_cYNMEodR.webp" alt="Article 1" className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-110" />
                         </div>
@@ -98,7 +98,7 @@ const Landing: React.FC = () => {
                             <p className="text-sm">Explore the fascinating journey of medical implants from their inception to modern advancements.</p><br/> <p className="text-sm text-blue-500 text-right"><a href="#" >Read more &gt;&gt;</a></p>
                         </div>
                     </div>
-                    <div className="article flex mt-8">
+                    <div className="article flex mt-8 pl-4">
                         <div className="w-1/3 overflow-hidden">
                             <img src="https://10web-site.ai/133/wp-content/uploads/sites/145/2024/11/tenweb_media_EmzztLxv.webp" alt="Article 2" className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-110" />
                         </div>
@@ -108,7 +108,7 @@ const Landing: React.FC = () => {
                             <p className="text-sm text-blue-500 text-right"><a href="#" >Read more &gt;&gt;</a></p>
                         </div>
                     </div>
-                    <div className="article flex mt-8">
+                    <div className="article flex mt-8 pl-4">
                         <div className="w-1/3 overflow-hidden">
                             <img src="https://10web-site.ai/133/wp-content/uploads/sites/145/2024/11/tenweb_media_qtDPWtT1.webp" alt="Article 3" className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-110" />
                         </div>
@@ -118,7 +118,7 @@ const Landing: React.FC = () => {
                             <p className="text-sm text-blue-500 text-right"><a href="#" >Read more &gt;&gt;</a></p>
                         </div>
                     </div>
-                    <div className="article flex mt-8">
+                    <div className="article flex mt-8 pl-4">
                         <div className="w-1/3 overflow-hidden">
                             <img src="https://10web-site.ai/133/wp-content/uploads/sites/145/2024/11/tenweb_media_vvX7EJad.webp" alt="Article 4" className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-110" />
                         </div>

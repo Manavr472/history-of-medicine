@@ -25,7 +25,7 @@ const Header: React.FC = () => {
                 </button>
             </div>
             {isOpen && (
-                <nav className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 md:hidden z-50">
+                <nav className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 dark:bg-black md:hidden z-50">
                     <Link href="#home" className="hover:text-yellow-500 font-semibold">Home</Link>
                     <Link href="#blog" className="hover:text-yellow-500 font-semibold">Blog</Link>
                     <Link href="#contact" className="hover:text-yellow-500 font-semibold">Contact</Link>
