@@ -91,7 +91,7 @@ const Article1: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 >
                 <img className='w-full h-full' src="https://i.ibb.co/FshJK62/Frank-Gunston-s-implant.png" alt="Frank-Gunston-s-implant" />
-                <p className='text-m mt-2'>Frank Gunston's Implant</p>
+                <p className='text-m mt-2'>Frank Gunston&apos;s Implant</p>
                 </motion.div>
             </div>
             </motion.section>
