@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
+import Link from 'next/link';
 
 const Landing: React.FC = () => {
     const controls = useAnimation();
@@ -91,11 +92,12 @@ const Landing: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="article flex mt-8 pl-4">
                         <div className="w-1/3 overflow-hidden">
-                            <img src="https://10web-site.ai/133/wp-content/uploads/sites/145/2024/11/tenweb_media_cYNMEodR.webp" alt="Article 1" className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-110" />
+                            <img src="https://i.ibb.co/QH0rs5P/TKA-timeline.png" alt="Article 1" className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-110" />
                         </div>
                         <div className="w-2/3 pl-4 ml-4 mr-8">
-                            <h3 className="text-2xl font-semibold mb-2">The Evolution of Medical Implants</h3>
-                            <p className="text-sm">Explore the fascinating journey of medical implants from their inception to modern advancements.</p><br/> <p className="text-sm text-blue-500 text-right"><a href="#" >Read more &gt;&gt;</a></p>
+                            <h3 className="text-2xl font-semibold mb-2">The History of Total Knee Arthroplasty</h3>
+                            <p className="text-sm">Total knee arthroplasty (TKA), commonly known as total knee replacement, has become one of the most successful surgical procedures in modern medicine.</p><br/> 
+                            <p className="text-sm text-blue-500 text-right"><Link href="/articles/The_History_of_Total_Knee_Arthroplasty" >Read more &gt;&gt;</Link></p>
                         </div>
                     </div>
                     <div className="article flex mt-8 pl-4">
