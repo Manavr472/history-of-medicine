@@ -100,7 +100,7 @@ const SurgeonInfo: React.FC = () => {
           {surgeons.map((surgeon, index) => (
           <motion.div 
             key={index} 
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform pd-8 transition duration-500 hover:scale-105 hover:shadow-lg hover:shadow-green-500 cursor-pointer" 
+            className="bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden transform pd-8 transition duration-500 hover:scale-105 hover:shadow-lg hover:shadow-green-500 cursor-pointer" 
             onClick={() => handleCardClick(surgeon)}
             whileHover={{ scale: 1.05 }}
           >
@@ -124,7 +124,7 @@ const SurgeonInfo: React.FC = () => {
           exit={{ opacity: 0 }}
         >
         <motion.div 
-        className="mt-14 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg max-w-2xl w-full relative overflow-y-auto max-h-full"
+        className="mt-14 bg-white dark:bg-black p-8 rounded-lg shadow-lg max-w-2xl w-full relative overflow-y-auto max-h-full"
         initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0.8 }}
