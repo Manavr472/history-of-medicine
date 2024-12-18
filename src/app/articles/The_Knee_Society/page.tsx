@@ -30,7 +30,6 @@ const Article2: React.FC = () => {
     const [section1Ref, section1InView] = useInView({ threshold: 0.1 });
     const [section2Ref, section2InView] = useInView({ threshold: 0.1 });
     const [section3Ref, section3InView] = useInView({ threshold: 0.1 });
-    const [section4Ref, section4InView] = useInView({ threshold: 0.1 });
 
     return (
         <>
