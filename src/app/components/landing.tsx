@@ -102,12 +102,12 @@ const Landing: React.FC = () => {
                     </div>
                     <div className="article flex mt-8 pl-4">
                         <div className="w-1/3 overflow-hidden">
-                            <img src="https://10web-site.ai/133/wp-content/uploads/sites/145/2024/11/tenweb_media_EmzztLxv.webp" alt="Article 2" className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-110" />
+                            <img src="https://i.ibb.co/D4dN1Rf/knee-society.png" alt="Article 2" className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-110" />
                         </div>
                         <div className="w-2/3 pl-4 ml-4 mr-4">
-                            <h3 className="text-2xl font-semibold mb-2">Augmented Reality in Medical Education</h3>
-                            <p className="text-sm">Discover how augmented reality is transforming medical education and training.</p><br/>
-                            <p className="text-sm text-blue-500 text-right"><a href="#" >Read more &gt;&gt;</a></p>
+                            <h3 className="text-2xl font-semibold mb-2">The Knee Society: A Driving Force in the Evolution of Total Knee Arthroplasty</h3>
+                            <p className="text-sm">Founded in 1983 amidst a burgeoning era of TKA innovation, the Society emerged from a recognized need: to bring order and scientific rigor to a field rapidly expanding with new implant designs and surgical techniques.</p><br/>
+                            <p className="text-sm text-blue-500 text-right"><a href="/articles/The_Knee_Society" >Read more &gt;&gt;</a></p>
                         </div>
                     </div>
                     <div className="article flex mt-8 pl-4">
