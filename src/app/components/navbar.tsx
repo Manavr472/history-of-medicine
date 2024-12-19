@@ -4,9 +4,17 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
+    const [isOpen3, setIsOpen3] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+    const toggleMenu2 = () => {
+        setIsOpen2(!isOpen2);
+    };
+    const toggleMenu3 = () => {
+        setIsOpen3(!isOpen3);
     };
 
     return (
@@ -27,10 +35,10 @@ const Header: React.FC = () => {
                 )}
             </div>
             <div className="relative">
-                <button onClick={toggleMenu} className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                <button onClick={toggleMenu2} className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
                     Browse
                 </button>
-                {isOpen && (
+                {isOpen2 && (
                     <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                             <Link href="/browse/channels" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Channels</Link>
@@ -64,10 +72,10 @@ const Header: React.FC = () => {
             </div>
         
                 <div className="relative">
-                    <button onClick={toggleMenu} className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                    <button onClick={toggleMenu3} className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
                         Profile
                     </button>
-                    {isOpen && (
+                    {isOpen3 && (
                         <div className="absolute mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                             <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                                 <Link href="/profile/watch-later" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Watch Later</Link>
@@ -81,7 +89,7 @@ const Header: React.FC = () => {
                     )}
                 </div>
             <div className="md:hidden">
-                <button onClick={toggleMenu} className="focus:outline-none">
+                <button onClick={toggleMenu3} className="focus:outline-none">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
