@@ -43,7 +43,7 @@ const JohnInsallPage: React.FC = () => {
                 John Insall was born in 1930 in Bournemouth,
                     England, by the sea. He was educated at the University of Cambridge and at London Hospital
                     Medical School, graduating in 1956. He received
-                    his training at St. Bartholomew's Hospital in Kent
+                    his training at St. Bartholomew&apos;s Hospital in Kent
                     and at the Royal Free Hospital in London. He then
                     served as a resident in general surgery and orthopedic surgery at the Royal Victoria Hospital and
                     at Shriners Hospital for Crippled Children in
@@ -57,7 +57,7 @@ const JohnInsallPage: React.FC = () => {
                     joined with Drs. W. Norman Scott, Michael A.
                     Kelly, and Peter D. McCann to form the Insall
                     Scott Kelly (ISK) Institute for Orthopedics and
-                    Sports Medicine at New York City's Beth Israel
+                    Sports Medicine at New York City&apos;s Beth Israel
                     Medical Center. He served as director of the ISK
                     Institute and its fellowship program. In 1996,
                     he was appointed clinical professor of orthopedic surgery at the Albert Einstein College of
@@ -72,7 +72,7 @@ const JohnInsallPage: React.FC = () => {
                     the Insall Award, which honors an outstanding
                     paper concerning clinical results and techniques
                     at the annual open meeting of the Society.
-                    John Insall's contributions to orthopedic
+                    John Insall&apos;s contributions to orthopedic
                     surgery are legendary. His articles appeared in
                     The Journal of Bone and Joint Surgery over four
                     decades, beginning with reports on his experience
@@ -127,10 +127,10 @@ const JohnInsallPage: React.FC = () => {
                 </p>
                 <p className="mt-4">
                     His lectures were classics, and he served frequently as the keynote speaker at national meetings. He was an annual fixture, for example, at
-                    Seth Greenwald's Current Concepts Meeting in
-                    Orlando, Larry Dorr's Master Techniques in Los
+                    Seth Greenwald&apos;s Current Concepts Meeting in
+                    Orlando, Larry Dorr&apos;s Master Techniques in Los
                     Angeles, and, of course, the ISK meeting in New
-                    York City. He adopted Leo Whiteside's technique
+                    York City. He adopted Leo Whiteside&apos;s technique
                     of video presentation in lieu of slides, delivering
                     messages that were clear, precise, and, when
                     appropriate, entertaining.
