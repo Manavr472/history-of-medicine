@@ -110,26 +110,6 @@ const Landing: React.FC = () => {
                             <p className="text-sm text-blue-500 text-right"><a href="/articles/The_Knee_Society" >Read more &gt;&gt;</a></p>
                         </div>
                     </div>
-                    <div className="article flex mt-8 pl-4">
-                        <div className="w-1/3 overflow-hidden">
-                            <img src="https://10web-site.ai/133/wp-content/uploads/sites/145/2024/11/tenweb_media_qtDPWtT1.webp" alt="Article 3" className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-110" />
-                        </div>
-                        <div className="w-2/3 pl-4 ml-4 mr-8">
-                            <h3 className="text-2xl font-semibold mb-2">The Importance of Biocompatibility in Implants</h3>
-                            <p className="text-sm">Learn why biocompatibility is crucial for the success of medical implants.</p><br/>
-                            <p className="text-sm text-blue-500 text-right"><a href="#" >Read more &gt;&gt;</a></p>
-                        </div>
-                    </div>
-                    <div className="article flex mt-8 pl-4">
-                        <div className="w-1/3 overflow-hidden">
-                            <img src="https://10web-site.ai/133/wp-content/uploads/sites/145/2024/11/tenweb_media_vvX7EJad.webp" alt="Article 4" className="w-full h-full object-cover rounded-lg transform transition-transform duration-300 hover:scale-110" />
-                        </div>
-                        <div className="w-2/3 pl-4 ml-4 mr-4">
-                            <h3 className="text-2xl font-semibold mb-2">Future Trends in Medical Implants</h3>
-                            <p className="text-sm">Explore the emerging trends shaping the future of medical implants.</p><br/>
-                            <p className="text-sm text-blue-500 text-right text-bottom"><a href="#" >Read more &gt;&gt;</a></p>
-                        </div>
-                    </div>
                 </div>
             </motion.div>
         </div>

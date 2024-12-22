@@ -2,8 +2,8 @@ import React from 'react';
 
 const SirJohnCharnleyPage: React.FC = () => {
     return (
-        <div className="flex p-5">
-            <div className="w-1/4 pr-5 p-4">
+        <div className="flex flex-col lg:flex-row p-5">
+            <div className="w-full lg:w-1/4 lg:pr-5 mb-5 lg:mb-0">
                 <h1 className="text-2xl font-bold">Sir John Charnley</h1>
                 <div className='border p-4 rounded shadow mt-4'>
                     <h2 className="text-xl font-semibold">Dates</h2><hr/>
@@ -37,7 +37,7 @@ const SirJohnCharnleyPage: React.FC = () => {
                 </div>
             </div>
         
-            <div className="w-2/3">
+            <div className="w-full lg:w-2/3 lg:mr-4 text-justify mb-5 lg:mb-0">
                 <h2 className="text-xl font-semibold">Detailed Journey of His Life</h2>
                 <p className="mt-4">
                     John Charnley was born in Bury on August 29,
@@ -246,7 +246,12 @@ const SirJohnCharnleyPage: React.FC = () => {
                     of humanity
                 </p>
             </div>
-            <div className="w-1/4 right">
+            <div className="w-full lg:w-1/4">
+                {/* Dummy comment */}
+                <div className="border p-4 rounded shadow mt-4">
+                    <h2 className="text-xl font-semibold">Comment by Dr. Ram</h2>
+                    <p className="mt-2">This is a very informative page about Sir John Charnley. His contributions to orthopedic surgery are truly remarkable.</p>
+                </div>
                 {/* Feedback Section */}
                 <div className="border p-4 rounded shadow mt-4">
                     <h2 className="text-xl font-semibold">Share Your Experience</h2>

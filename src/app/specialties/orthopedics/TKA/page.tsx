@@ -13,8 +13,8 @@ const TKA = () => {
     const handleDesignChange = (e: React.ChangeEvent<HTMLSelectElement>) => setSelectedDesign(e.target.value);
 
     return (
-        <div className="p-4 flex">
-            <div className="w-1/4 p-4 border-r">
+        <div className="p-4 flex flex-col md:flex-row">
+            <div className="w-full md:w-1/4 p-4 border-b md:border-b-0 md:border-r">
                 <h2 className="text-xl font-bold mb-4">Filters</h2>
                 <div className="mb-4">
                     <label className="block mb-2">Timeline</label>
@@ -57,11 +57,11 @@ const TKA = () => {
                     </select>
                 </div>
             </div>
-            <div className="w-3/4 p-4">
+            <div className="w-full md:w-3/4 p-4">
                 <h1 className="text-2xl font-bold mb-4">Total Knee Arthroplasty (TKA)</h1>
                 <p className="mb-6">Welcome to the TKA page. Here you will find information about different implants used in Total Knee Arthroplasty.</p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Filtered implants will be displayed here */}
                     {/* Example implant items */}
                     <div className="implant-item p-4 border rounded-lg shadow">
