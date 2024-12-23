@@ -67,7 +67,7 @@ const TKA = () => {
                     <div className="implant-item p-4 border rounded-lg shadow">
                         <h2 className="text-xl font-semibold mb-2">Implant 1</h2>
                         <p className="mb-4">Details about Implant 1...</p>
-                        <iframe src="URL_for_Implant_1_model" title="Implant 1 Model" width="100%" height="400" className="rounded-lg"></iframe>
+                    <iframe src="../../xrmuseum" title="XR Museum" width="100%" height="400" className="rounded-lg"></iframe>
                     </div>
                     {/* Add more implants as needed */}
                 </div>

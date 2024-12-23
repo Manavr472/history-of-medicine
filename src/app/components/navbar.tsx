@@ -50,6 +50,12 @@ const Header: React.FC = () => {
                 </div>
 
                 <div className="relative">
+                    <Link href="/xrmuseum" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                        XR Museum
+                    </Link>
+                </div>
+
+                <div className="relative">
                     <input
                         type="text"
                         placeholder="Search..."
