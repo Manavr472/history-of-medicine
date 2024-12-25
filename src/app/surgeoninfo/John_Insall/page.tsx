@@ -175,7 +175,7 @@ const JohnInsallPage: React.FC = () => {
                 {/* Feedback Section */}
                 <div className="border p-4 rounded shadow mt-4">
                     <h2 className="text-xl font-semibold">Testimonial from a Fellow Surgeon</h2>
-                    <p className="mt-2">Dr. John Insall's contributions to orthopedic surgery have been groundbreaking. His pioneering work in knee replacements has set new benchmarks in the field. I had the honor of collaborating with him on several projects, and his expertise and passion for innovation were truly inspiring. His legacy continues to influence modern orthopedic practices.</p>
+                    <p className="mt-2">Dr. John Insall&apos;s contributions to orthopedic surgery have been groundbreaking. His pioneering work in knee replacements has set new benchmarks in the field. I had the honor of collaborating with him on several projects, and his expertise and passion for innovation were truly inspiring. His legacy continues to influence modern orthopedic practices.</p>
                 </div>
                 <div className="border p-4 rounded shadow mt-4">
                     <h2 className="text-xl font-semibold">Share Your Experience</h2>

@@ -59,7 +59,7 @@ const ClementBSledgePage: React.FC = () => {
                 {/* Dummy comment */}
                 <div className="border p-4 rounded shadow mt-4">
                     <h2 className="text-xl font-semibold">Personal Interactions and Contributions</h2>
-                    <p className="mt-2">Dr. Clement B. Sledge's contributions to orthopedic surgery are truly remarkable. I had the privilege of attending one of his lectures, and his insights into knee replacement surgery were invaluable. His dedication to advancing the field is inspiring. His personal interactions with patients and colleagues alike have left a lasting impact on all who have had the opportunity to work with him.</p>
+                    <p className="mt-2">Dr. Clement B. Sledge&apos;s contributions to orthopedic surgery are truly remarkable. I had the privilege of attending one of his lectures, and his insights into knee replacement surgery were invaluable. His dedication to advancing the field is inspiring. His personal interactions with patients and colleagues alike have left a lasting impact on all who have had the opportunity to work with him.</p>
                 </div>
                 {/* Feedback Section */}
                 <div className="border p-4 rounded shadow mt-4">
