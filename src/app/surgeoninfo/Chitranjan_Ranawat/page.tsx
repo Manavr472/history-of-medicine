@@ -57,8 +57,8 @@ const ChitranjanRanawatPage: React.FC = () => {
             <div className="w-full lg:w-1/4">
                 {/* Feedback Section */}
                 <div className="border p-4 rounded shadow mt-4">
-                    <h2 className="text-xl font-semibold">Comment by Dr. Ram</h2>
-                    <p className="mt-2">This is a very informative page about Chitranjan Ranawat. His contributions to orthopedic surgery are truly remarkable.</p>
+                    <h2 className="text-xl font-semibold">Contribution by A Knee Surgeon</h2>
+                    <p className="mt-2">This is a very informative page about Chitranjan Ranawat. His contributions to orthopedic surgery are truly remarkable. I had the privilege of attending one of his lectures, and his insights into knee replacement surgery were invaluable. His dedication to advancing the field is inspiring.</p>
                 </div>
                 <div className="border p-4 rounded shadow mt-4">
                     <h2 className="text-xl font-semibold">Share Your Experience</h2>

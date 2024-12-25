@@ -57,8 +57,8 @@ const MichaelFreemanPage: React.FC = () => {
             <div className="w-full lg:w-1/4">
                 {/* Feedback Section */}
                 <div className="border p-4 rounded shadow mt-4">
-                    <h2 className="text-xl font-semibold">Comment by Dr. Smith</h2>
-                    <p className="mt-2">This is a very informative page about Michael Freeman. His contributions to orthopedic surgery are truly remarkable.</p>
+                    <h2 className="text-xl font-semibold">Testimonial from a Colleague</h2>
+                    <p className="mt-2">Dr. Michael Freeman's contributions to orthopedic surgery have been revolutionary. His innovative work in knee replacements has established new standards in the field. I had the privilege of working with him on numerous projects, and his dedication and passion for advancement were truly remarkable. His legacy continues to shape contemporary orthopedic practices.</p>
                 </div>
                 <div className="border p-4 rounded shadow mt-4">
                     <h2 className="text-xl font-semibold">Share Your Experience</h2>

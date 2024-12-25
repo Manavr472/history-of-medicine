@@ -249,8 +249,8 @@ const SirJohnCharnleyPage: React.FC = () => {
             <div className="w-full lg:w-1/4">
                 {/* Dummy comment */}
                 <div className="border p-4 rounded shadow mt-4">
-                    <h2 className="text-xl font-semibold">Comment by Dr. Ram</h2>
-                    <p className="mt-2">This is a very informative page about Sir John Charnley. His contributions to orthopedic surgery are truly remarkable.</p>
+                    <h2 className="text-xl font-semibold">Comment by Practicing Surgeon</h2>
+                    <p className="mt-2">This is a very informative page about Sir John Charnley. His contributions to orthopedic surgery are truly remarkable. I had the privilege of working with some of his techniques during my residency, and they have significantly impacted my practice.</p>
                 </div>
                 {/* Feedback Section */}
                 <div className="border p-4 rounded shadow mt-4">

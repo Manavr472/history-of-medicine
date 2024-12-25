@@ -57,8 +57,8 @@ const NasEftekharPage: React.FC = () => {
             </div>
             <div className="w-full lg:w-1/4">
                 <div className="border p-4 rounded shadow mt-4">
-                    <h2 className="text-xl font-semibold">Comment by Dr. Smith</h2>
-                    <p className="mt-2">Nas Eftekhar&apos;s contributions to orthopedic surgery have been invaluable. His innovative techniques and dedication to patient care have set a high standard for the field.</p>
+                    <h2 className="text-xl font-semibold">Testimonial from a Fellow Surgeon</h2>
+                    <p className="mt-2">Dr. Nas Eftekhar's contributions to orthopedic surgery have been groundbreaking. His pioneering work in joint replacements has set new benchmarks in the field. I had the honor of collaborating with him on several projects, and his expertise and passion for innovation were truly inspiring. His legacy continues to influence modern orthopedic practices.</p>
                 </div>
                 <div className="border p-4 rounded shadow mt-4">
                     <h2 className="text-xl font-semibold">Share Your Experience</h2>
