@@ -5,6 +5,7 @@ const ChitranjanRanawatPage: React.FC = () => {
         <div className="flex flex-col lg:flex-row p-5">
             <div className="w-full lg:w-1/4 lg:pr-5 mb-5 lg:mb-0">
                 <h1 className="text-2xl font-bold">Chitranjan Ranawat</h1>
+                <img className='mt-4 w-auto h-auto  rounded-lg' src="https://i.ibb.co/wLvmy8p/Chitranjan-Ranawat.png" alt="Chitranjan Ranawat" />
                 <div className='border p-4 rounded shadow mt-4'>
                     <h2 className="text-xl font-semibold">Dates</h2><hr/>
                     <ul className="list-disc list-inside mt-2">
@@ -30,8 +31,8 @@ const ChitranjanRanawatPage: React.FC = () => {
                 <div className='border p-4 rounded shadow mt-4'>
                     <h2 className="text-xl font-semibold mt-2">Resources</h2><hr/>
                     <ul className="list-disc list-inside mt-2">
-                        <li><a href="https://en.wikipedia.org/wiki/Chitranjan_Ranawat" target="_blank" rel="noopener noreferrer" className="text-blue-500">Wikipedia</a></li>
-                        <li><a href="https://www.hss.edu/physicians_ranawat-chitranjan.asp" target="_blank" rel="noopener noreferrer" className="text-blue-500">HSS</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Chitranjan_Singh_Ranawat" target="_blank" rel="noopener noreferrer" className="text-blue-500">Wikipedia</a></li>
+                        <li><a href="https://www.ranawatorthopaedics.com/doctor/chitranjan-s-ranawat-m-d/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Ranawat Orthopaedics</a></li>
                     </ul>
                 </div>
             </div>

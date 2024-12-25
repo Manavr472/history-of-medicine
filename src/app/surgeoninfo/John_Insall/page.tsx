@@ -5,6 +5,7 @@ const JohnInsallPage: React.FC = () => {
         <div className="flex flex-col lg:flex-row p-5">
             <div className="w-full lg:w-1/4 lg:pr-5 mb-5 lg:mb-0">
                 <h1 className="text-2xl font-bold">John Insall</h1>
+                <img className='mt-4 w-auto h-auto rounded-lg' src="https://i.ibb.co/DzPxMRj/Dr-John-Insall.png" alt="John Insall" />
                 <div className='border p-4 rounded shadow mt-4'>
                     <h2 className="text-xl font-semibold">Dates</h2><hr/>
                     <ul className="list-disc list-inside mt-2">
@@ -32,7 +33,7 @@ const JohnInsallPage: React.FC = () => {
                     <h2 className="text-xl font-semibold mt-2">Resources</h2><hr/>
                     <ul className="list-disc list-inside mt-2">
                         <li><a href="https://en.wikipedia.org/wiki/John_Insall" target="_blank" rel="noopener noreferrer" className="text-blue-500">Wikipedia</a></li>
-                        <li><a href="https://www.aaos.org/aaosnow/2017/dec/youraaos/youraaos03/" target="_blank" rel="noopener noreferrer" className="text-blue-500">AAOS</a></li>
+                        <li><a href="https://www.jbjs.org/reader.php?rsuite_id=782331&source=The_Journal_of_Bone_and_Joint_Surgery/83/4/635&topics=kn#info" target="_blank" rel="noopener noreferrer" className="text-blue-500">JB&JS</a></li>
                     </ul>
                 </div>
             </div>

@@ -5,11 +5,11 @@ const ClementBSledgePage: React.FC = () => {
         <div className="flex flex-col lg:flex-row p-5">
             <div className="w-full lg:w-1/4 lg:pr-5 mb-5 lg:mb-0">
                 <h1 className="text-2xl font-bold">Clement B. Sledge</h1>
+                <img className='mt-4 w-auto h-auto rounded-lg' src="https://i.ibb.co/RynshN9/Clement-B-Sledge.jpg" alt="Clement Sledge" />
                 <div className='border p-4 rounded shadow mt-4'>
                     <h2 className="text-xl font-semibold">Dates</h2><hr/>
                     <ul className="list-disc list-inside mt-2">
                         <li>Date of Birth: 1930</li>
-                        <li>Date of Death: N/A</li>
                         <li>Serving Period: 1960 - Present</li>
                     </ul>
                 </div>
@@ -31,8 +31,8 @@ const ClementBSledgePage: React.FC = () => {
                 <div className='border p-4 rounded shadow mt-4'>
                     <h2 className="text-xl font-semibold mt-2">Resources</h2><hr/>
                     <ul className="list-disc list-inside mt-2">
-                        <li><a href="https://en.wikipedia.org/wiki/Clement_B_Sledge" target="_blank" rel="noopener noreferrer" className="text-blue-500">Wikipedia</a></li>
-                        <li><a href="https://www.britannica.com/biography/Clement-B-Sledge" target="_blank" rel="noopener noreferrer" className="text-blue-500">Britannica</a></li>
+                        <li><a href="https://connects.catalyst.harvard.edu/Profiles/display/Person/60828" target="_blank" rel="noopener noreferrer" className="text-blue-500">Harvard Catalyst</a></li>
+                        <li><a href="https://www.ases-assn.org/founder/clement-b-sledge-md/" target="_blank" rel="noopener noreferrer" className="text-blue-500">ASES</a></li>
                     </ul>
                 </div>
             </div>

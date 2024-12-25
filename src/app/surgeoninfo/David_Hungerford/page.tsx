@@ -5,6 +5,7 @@ const DavidHungerfordPage: React.FC = () => {
         <div className="flex flex-col lg:flex-row p-5">
             <div className="w-full lg:w-1/4 lg:pr-5 mb-5 lg:mb-0">
                 <h1 className="text-2xl font-bold">David Hungerford</h1>
+                <img className='mt-4 w-auto h-auto rounded-lg' src="https://i.ibb.co/25htR6n/David-Hungerford.jpg" alt="David Hungerford" />
                 <div className='border p-4 rounded shadow mt-4'>
                     <h2 className="text-xl font-semibold">Dates</h2><hr/>
                     <ul className="list-disc list-inside mt-2">

@@ -5,10 +5,12 @@ const MichaelFreemanPage: React.FC = () => {
         <div className="flex flex-col lg:flex-row p-5">
             <div className="w-full lg:w-1/4 lg:pr-5 mb-5 lg:mb-0">
                 <h1 className="text-2xl font-bold">Michael Freeman</h1>
+                <img className='mt-4 w-auto h-auto rounded-lg' src="https://i.ibb.co/rfkZytg/Michael-Freeman.jpg" alt="Michael Freeman" />
                 <div className='border p-4 rounded shadow mt-4'>
                     <h2 className="text-xl font-semibold">Dates</h2><hr/>
                     <ul className="list-disc list-inside mt-2">
                         <li>Date of Birth: 1929</li>
+                        <li>Date of Death: 2017</li>
                         <li>Serving Period: 1960 - 2006</li>
                     </ul>
                 </div>
@@ -31,7 +33,7 @@ const MichaelFreemanPage: React.FC = () => {
                     <h2 className="text-xl font-semibold mt-2">Resources</h2><hr/>
                     <ul className="list-disc list-inside mt-2">
                         <li><a href="https://en.wikipedia.org/wiki/Michael_Freeman_(surgeon)" target="_blank" rel="noopener noreferrer" className="text-blue-500">Wikipedia</a></li>
-                        <li><a href="https://www.rcseng.ac.uk/library-and-publications/library/blog/michael-freeman/" target="_blank" rel="noopener noreferrer" className="text-blue-500">RCS</a></li>
+                        <li><a href="https://livesonline.rcseng.ac.uk/biogs/E009379b.htm" target="_blank" rel="noopener noreferrer" className="text-blue-500">RCS</a></li>
                     </ul>
                 </div>
             </div>
