@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const NasEftekharPage: React.FC = () => {
     return (
@@ -9,7 +10,7 @@ const NasEftekharPage: React.FC = () => {
                 <div className='border p-4 rounded shadow mt-4'>
                     <h2 className="text-xl font-semibold">Dates</h2><hr/>
                     <ul className="list-disc list-inside mt-2">
-                        <li>Date of Birth: 1 January 1930</li>
+                        <li>Date of Birth: 1 January <Link href="./1930"><u>1930</u></Link></li>
                         <li>Date of Death: 15 March 2015</li>
                         <li>Serving Period: 1955 - 2015</li>
                     </ul>
