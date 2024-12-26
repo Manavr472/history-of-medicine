@@ -50,7 +50,7 @@ const Header: React.FC = () => {
                 </div>
 
                 <div className="relative">
-                    <Link href="#" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                    <Link href="/xrmuseum" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
                         XR Museum
                     </Link>
                 </div>
