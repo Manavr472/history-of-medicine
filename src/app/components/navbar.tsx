@@ -117,6 +117,7 @@ const Header: React.FC = () => {
                         )}<hr/>
                     </div>
                     <Link href="/surgeoninfo" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Surgeon Info</Link>
+                    <Link href="/xrmuseum" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>XR Museum</Link>
                     <div className="relative">
                         <button onClick={toggleMenu3} className="w-full flex items-center justify-between hover:text-yellow-500 font-semibold focus:outline-none">
                             Profile
