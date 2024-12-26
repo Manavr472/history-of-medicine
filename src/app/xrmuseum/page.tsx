@@ -26,8 +26,8 @@ const XRMuseum: React.FC = () => {
             await session.setSource(mediaStream);
             await session.play();
 
-            const lensIds = ['43276930875', '43281170875', '43288720877'];
-            const lensGroupId = 'e5093c15-440e-4bdb-8476-5555060bc1c0';
+            const lensIds = ['5c04e964-0475-4dd6-a8d0-65c8a94b2b3b', '5c04e964-0475-4dd6-a8d0-65c8a94b2b3b', '94d0f372-871e-4237-b14e-81b6e0fb3c17'];
+            const lensGroupId = '1c73b277-a61a-46c8-9973-14e07193f051';
             
 
             const lensSelect = lensSelectRef.current;
