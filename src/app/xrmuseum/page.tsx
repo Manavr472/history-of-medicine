@@ -11,7 +11,7 @@ const XRMuseum: React.FC = () => {
             const { bootstrapCameraKit } = await import('@snap/camera-kit');
 
             const cameraKit = await bootstrapCameraKit({
-                apiToken: 'eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzM1MDQxNDk2LCJzdWIiOiIwYzQzMDhhYi1hNGFmLTRhZDQtODBhYS1iOTBmOTZlNjFlNTl-U1RBR0lOR340YjEyOWViMi0zMDMyLTQzOGQtOWYxYy1kMDFjZTRlNGVkMzUifQ.QlaatCM6la1TNH7EfHlxj3EpG7aHrK6HIqVacLg3_Dc',
+                apiToken: 'eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzM0OTM1MDg5LCJzdWIiOiIwYzQzMDhhYi1hNGFmLTRhZDQtODBhYS1iOTBmOTZlNjFlNTl-UFJPRFVDVElPTn5kOTYzM2JjYS1hMmE5LTQ1ZjMtYWZlYy0xZGQxZTMyNDI3M2QifQ.LLdaLW6QH7b-jbGGzXLsAV_Bh0FMbR7zfXJoZp4OXd0',
             });
 
             const liveRenderTarget = canvasRef.current;
@@ -26,7 +26,7 @@ const XRMuseum: React.FC = () => {
             await session.setSource(mediaStream);
             await session.play();
 
-            const lensIds = ['5c04e964-0475-4dd6-a8d0-65c8a94b2b3b', '0ff0cfd1-6bb3-4888-a46a-6e4ca1fc3c83', '94d0f372-871e-4237-b14e-81b6e0fb3c17'];
+            const lensIds = ['8a6293a3-f546-4121-9d3c-d8502f3ffd66', '84428e1f-8fd2-4571-9815-fe012922ad69']
             const lensGroupId = '1c73b277-a61a-46c8-9973-14e07193f051';
             
 
@@ -51,32 +51,31 @@ const XRMuseum: React.FC = () => {
     }, []);
 
     return (
-        <div  className='flex flex-col items-center'>
+        <div className='flex flex-col items-center p-4'>
             <div className="flex cursor-pointer space-x-4 mt-4">
-                {['Lens 1', 'Lens 2', 'Lens 3'].map((lens, index) => (
-                    <div
-                        key={index}
-                        className={`${
-                            selectedLensIndex === index ? 'underline green cursor-pointer text-blue-500' : 'text-black'
-                        }`}
-                        onClick={() => {
-                            setSelectedLensIndex(index);
-                            if (lensSelectRef.current) {
-                                lensSelectRef.current.selectedIndex = index;
-                                const event = new Event('change');
-                                lensSelectRef.current.dispatchEvent(event);
-                            }
-                        }}
-                    >
-                        {lens}
-                    </div>
-                ))}
+            {['Lens 1', 'Lens 2'].map((lens, index) => (
+                <div
+                key={index}
+                className={`${
+                    selectedLensIndex === index ? 'underline green cursor-pointer text-blue-500' : 'text-black'
+                }`}
+                onClick={() => {
+                    setSelectedLensIndex(index);
+                    if (lensSelectRef.current) {
+                    lensSelectRef.current.selectedIndex = index;
+                    const event = new Event('change');
+                    lensSelectRef.current.dispatchEvent(event);
+                    }
+                }}
+                >
+                {lens}
+                </div>
+            ))}
             </div>
-            <canvas id="canvas" className="mx-20 h-screen w-2xl" ref={canvasRef}></canvas>
+            <canvas id="canvas" className="w-full h-auto max-w-4xl" ref={canvasRef}></canvas>
             <select id="lensSelect" className='hidden' ref={lensSelectRef}>
-                <option value="0">Lens 1</option>
-                <option value="1">Lens 2</option>
-                <option value="2">Lens 3</option>
+            <option value="0">Lens 1</option>
+            <option value="1">Lens 2</option>
             </select>
         </div>
     );
