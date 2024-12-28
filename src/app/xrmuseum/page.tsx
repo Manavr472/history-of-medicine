@@ -45,6 +45,7 @@ const XRMuseum: React.FC = () => {
         };
 
         const updateCamera = async (session: CameraKitSession) => {
+            if (typeof window === 'undefined' || typeof navigator === 'undefined') return;
             const facingMode = 'environment';
 
             if (mediaStream) {
