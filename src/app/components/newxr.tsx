@@ -16,7 +16,7 @@ const NewXR: React.FC = () => {
 
     async function init() {
       const cameraKit = await bootstrapCameraKit({
-        apiToken: 'eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzM1MDQxNDk2LCJzdWIiOiIwYzQzMDhhYi1hNGFmLTRhZDQtODBhYS1iOTBmOTZlNjFlNTl-U1RBR0lOR340YjEyOWViMi0zMDMyLTQzOGQtOWYxYy1kMDFjZTRlNGVkMzUifQ.QlaatCM6la1TNH7EfHlxj3EpG7aHrK6HIqVacLg3_Dc',
+        apiToken: 'eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzM0OTM1MDg5LCJzdWIiOiIwYzQzMDhhYi1hNGFmLTRhZDQtODBhYS1iOTBmOTZlNjFlNTl-UFJPRFVDVElPTn5kOTYzM2JjYS1hMmE5LTQ1ZjMtYWZlYy0xZGQxZTMyNDI3M2QifQ.LLdaLW6QH7b-jbGGzXLsAV_Bh0FMbR7zfXJoZp4OXd0',
       });
 
       const session = await cameraKit.createSession({ liveRenderTarget });
