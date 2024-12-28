@@ -10,10 +10,11 @@ const XRMuseum: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const lensSelectRef = useRef<HTMLSelectElement>(null);
     const [selectedLensIndex, setSelectedLensIndex] = React.useState<number>(0);
-    let mediaStream: MediaStream;
+    let mediaStream: MediaStream | null = null;
 
     useEffect(() => {
         const initializeCameraKit = async () => {
+            if (typeof window === 'undefined') return;
             const cameraKit = await bootstrapCameraKit({
                 apiToken: 'eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNzM0OTM1MDg5LCJzdWIiOiIwYzQzMDhhYi1hNGFmLTRhZDQtODBhYS1iOTBmOTZlNjFlNTl-UFJPRFVDVElPTklPTn5kOTYzM2JjYS1hMmE5LTQ1ZjMtYWZlYy0xZGQxZTMyNDI3M2QifQ.LLdaLW6QH7b-jbGGzXLsAV_Bh0FMbR7zfXJoZp4OXd0',
             });
