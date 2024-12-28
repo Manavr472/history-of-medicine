@@ -1,11 +1,13 @@
 "use client";
 import React from 'react';
-import Newxr from '../components/newxr';
+import dynamic from 'next/dynamic';
+
+const NewXRClient = dynamic(() => import('../components/newxr'), { ssr: false });
 
 const XRMuseum: React.FC = () => {
 
     return (
-        <Newxr />
+        <NewXRClient />
     );
 };
 
