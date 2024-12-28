@@ -11,7 +11,6 @@ const XRMuseum: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const lensSelectRef = useRef<HTMLSelectElement>(null);
     const [selectedLensIndex, setSelectedLensIndex] = React.useState<number>(0);
-    const [isBackFacing, setIsBackFacing] = React.useState<boolean>(true);
     const flipCameraRef = useRef<HTMLButtonElement>(null);
     let mediaStream: MediaStream;
 
@@ -44,23 +43,10 @@ const XRMuseum: React.FC = () => {
             const defaultLensId = lensIds[0];
             const defaultLens = await cameraKit.lensRepository.loadLens(defaultLensId, lensGroupId);
             await session.applyLens(defaultLens);
-
-            bindFlipCamera(session);
-        };
-
-        const bindFlipCamera = (session: CameraKitSession) => {
-            const flipCamera = flipCameraRef.current;
-            if (!flipCamera) return;
-
-            flipCamera.style.cursor = 'pointer';
-            flipCamera.addEventListener('click', () => {
-                updateCamera(session);
-            });
         };
 
         const updateCamera = async (session: CameraKitSession) => {
-            setIsBackFacing((prev) => !prev);
-            const facingMode = isBackFacing ? 'environment' : 'user';
+            const facingMode = 'environment';
 
             if (mediaStream) {
                 session.pause();
@@ -74,20 +60,16 @@ const XRMuseum: React.FC = () => {
             });
 
             const source = createMediaStreamSource(mediaStream, {
-                cameraType: isBackFacing ? 'environment' : 'user',
+                cameraType: 'environment',
             });
 
             await session.setSource(source);
-
-            if (!isBackFacing) {
-                source.setTransform(Transform2D.MirrorX);
-            }
 
             session.play();
         };
 
         initializeCameraKit();
-    }, [isBackFacing]);
+    }, []);
 
     return (
         <div className='flex flex-col items-center p-4'>
@@ -116,9 +98,6 @@ const XRMuseum: React.FC = () => {
                 <option value="0">Lens 1</option>
                 <option value="1">Lens 2</option>
             </select>
-            <button id="flip" ref={flipCameraRef}>
-                Switch to Front Camera
-            </button>
         </div>
     );
 };
