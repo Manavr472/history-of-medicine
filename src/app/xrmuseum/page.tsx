@@ -4,14 +4,12 @@ import {
     bootstrapCameraKit,
     CameraKitSession,
     createMediaStreamSource,
-    Transform2D,
 } from '@snap/camera-kit';
 
 const XRMuseum: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const lensSelectRef = useRef<HTMLSelectElement>(null);
     const [selectedLensIndex, setSelectedLensIndex] = React.useState<number>(0);
-    const flipCameraRef = useRef<HTMLButtonElement>(null);
     let mediaStream: MediaStream;
 
     useEffect(() => {
