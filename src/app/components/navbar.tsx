@@ -19,7 +19,9 @@ const Header: React.FC = () => {
 
     return (
         <div className="container flex items-center justify-between p-8 h-24 mx-auto relative z-50">
-            <Link href="/" className="text-xl hover:text-yellow-500 font-semibold">Dummy Logo</Link>
+            <Link href="/">
+                <img src="https://i.ibb.co/Px3h5MJ/Untitled-design.png" alt="Untitled-design" className="h-12" />
+            </Link>
             <div className='hidden md:flex space-x-20'>
                 <div
                     className="relative"

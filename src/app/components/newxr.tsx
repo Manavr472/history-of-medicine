@@ -95,9 +95,9 @@ const NewXR: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container mx-auto mt-15 mb-8 pd-8 item-center flex flex-col items-center p-4"> 
       <select id="lensselect"></select>
-      <canvas id="canvas"></canvas>
+      <canvas id="canvas" className="mt-8 mb-8 w-full h-auto max-w-4xl"></canvas>
       <button id="flip"></button>
     </div>
   );

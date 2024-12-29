@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 const Hero = () => {
   const [currentPage] = useState(0);
@@ -54,6 +55,7 @@ const Hero = () => {
           <p className="text-base md:text-xl text-white max-w-xl md:max-w-2xl text-center">
           Step into the past and explore the fascinating evolution of medical implants. Our virtual museum offers an immersive experience that brings history to life through interactive 3D models.
           </p>
+          <button className="bg-yellow-500 text-black font-semibold px-4 py-2 mt-4 md:mt-8 rounded-full hover:bg-yellow-600"><Link href="../xrmuseum">Explore Now</Link></button>
         </motion.div>
         </AnimatePresence>
       </div>
