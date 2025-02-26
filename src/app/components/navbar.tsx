@@ -3,19 +3,19 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 const Header: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    // const [isOpen, setIsOpen] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
-    const [isOpen3, setIsOpen3] = useState(false);
+    // const [isOpen3, setIsOpen3] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+    // const toggleMenu = () => {
+    //     setIsOpen(!isOpen);
+    // };
     const toggleMenu2 = () => {
         setIsOpen2(!isOpen2);
     };
-    const toggleMenu3 = () => {
-        setIsOpen3(!isOpen3);
-    };
+    // const toggleMenu3 = () => {
+    //     setIsOpen3(!isOpen3);
+    // };
 
     return (
         <div className="container flex items-center justify-between p-8 h-24 mx-auto relative z-50">
