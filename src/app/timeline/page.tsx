@@ -8,7 +8,7 @@ interface TimelineItemProps {
     imageUrl: string;
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({ year, title, description, imageUrl }) => {
+const TimelineItem: React.FC<TimelineItemProps> = ({title, description, imageUrl }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
