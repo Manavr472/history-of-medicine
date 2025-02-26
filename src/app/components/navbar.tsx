@@ -23,7 +23,7 @@ const Header: React.FC = () => {
                 <img src="https://i.ibb.co/Px3h5MJ/Untitled-design.png" alt="Untitled-design" className="h-12" />
             </Link>
             <div className='hidden md:flex space-x-20'>
-                <div
+                {/* <div
                     className="relative"
                     onMouseEnter={() => setIsOpen(true)}
                     onMouseLeave={() => setIsOpen(false)}
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
                             </div>
                         </div>
                     )}
-                </div>
+                </div> */}
                 <div className="relative">
                     <Link href="/surgeoninfo" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
                         Surgeon Info
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
                     </Link>
                 </div>
 
-                <div className="relative">
+                {/* <div className="relative">
                     <input
                         type="text"
                         placeholder="Search..."
@@ -66,11 +66,13 @@ const Header: React.FC = () => {
                         <svg className="w-6 h-6 text-gray-500 hover:text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"></svg>
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </button>
-            </div><div className="relative">
-                    <button className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
-                        Favorites
-                    </button>
-                </div><div
+                </div> */}
+            <div className="relative">
+                    <Link href="/timeline" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                        Timeline
+                    </Link>
+                </div>
+                {/* <div
                     className="relative"
                     onMouseEnter={() => setIsOpen3(true)}
                     onMouseLeave={() => setIsOpen3(false)}
@@ -91,7 +93,7 @@ const Header: React.FC = () => {
                             </div>
                         </div>
                     )}
-                </div>
+                </div> */}
             </div>
             <div className="md:hidden">
                 <button onClick={toggleMenu2} className="focus:outline-none">
@@ -103,7 +105,7 @@ const Header: React.FC = () => {
             {isOpen2 && (
                 <nav className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 dark:bg-black md:hidden z-50">
                     <Link href="/" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Home</Link>
-                    <div className="relative">
+                    {/* <div className="relative">
                         <button onClick={toggleMenu} className="w-full flex items-center justify-between hover:text-yellow-500 font-semibold focus:outline-none">
                             Specialties
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -117,10 +119,11 @@ const Header: React.FC = () => {
                                 <Link href="/specialties/cardiac-surgery" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Cardiac Surgery</Link>
                             </div>
                         )}<hr/>
-                    </div>
+                    </div> */}
                     <Link href="/surgeoninfo" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Surgeon Info</Link>
                     <Link href="/xrmuseum" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>XR Museum</Link>
-                    <div className="relative">
+                    <Link href="/timeline" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Timeline</Link>
+                    {/* <div className="relative">
                         <button onClick={toggleMenu3} className="w-full flex items-center justify-between hover:text-yellow-500 font-semibold focus:outline-none">
                             Profile
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +139,7 @@ const Header: React.FC = () => {
                                 <Link href="/logout" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Logout</Link>
                             </div>
                         )}<hr/>
-                    </div>
+                    </div> */}
                 </nav>
             )}
         </div>
