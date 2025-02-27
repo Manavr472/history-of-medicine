@@ -41,7 +41,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({year, title, description, im
                     <img src={imageUrl} alt={title} className="p-4 max-w-full h-auto rounded-lg mx-auto shadow-sm" />
                     <hr className="my-4 border-gray-300 dark:border-gray-700" />
                     <strong className='mt-2 text-md sm:text-lg font-bold lg:text-xl text-gray-900 dark:text-gray-100'>Year: {year}</strong>
-                    <p className="mt-2 py-2 text-sm sm:text-base lg:text-lg text-gray-700 dark:text-gray-300">{description}</p>
+                    <p className="mt-2 py-2 px-2 text-sm sm:text-base lg:text-lg text-gray-700 dark:text-gray-300">{description}</p>
                 </motion.div>
             </motion.div>
         </div>

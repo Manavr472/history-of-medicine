@@ -52,8 +52,14 @@ const Header: React.FC = () => {
                 </div>
 
                 <div className="relative">
-                    <Link href="/xrmuseum" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                    <Link href="https://xr-museum.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
                         XR Museum
+                    </Link>
+                </div>
+                
+                <div className="relative">
+                    <Link href="/modelar" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                        3D Implants
                     </Link>
                 </div>
 
@@ -121,7 +127,8 @@ const Header: React.FC = () => {
                         )}<hr/>
                     </div> */}
                     <Link href="/surgeoninfo" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Surgeon Info</Link>
-                    <Link href="/xrmuseum" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>XR Museum</Link>
+                    <Link href="https://xr-museum.vercel.app/" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>XR Museum</Link>
+                    <Link href="/modelar" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>3D Implants</Link>
                     <Link href="/timeline" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Timeline</Link>
                     {/* <div className="relative">
                         <button onClick={toggleMenu3} className="w-full flex items-center justify-between hover:text-yellow-500 font-semibold focus:outline-none">
