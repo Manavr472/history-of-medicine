@@ -1,41 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import '@google/model-viewer';
-
-// Create proper type definitions for model-viewer
-type ModelViewerAttributes = {
-  src?: string;
-  alt?: string;
-  ar?: boolean;
-  'ar-modes'?: string;
-  'camera-controls'?: boolean;
-  'tone-mapping'?: string;
-  poster?: string;
-  'shadow-intensity'?: string;
-};
-
-// Extend HTMLElement with required model-viewer props
-interface ModelViewerElement extends HTMLElement {
-  loading: boolean;
-}
-
-// Define the progress event interface
-interface ModelViewerProgressEvent extends Event {
-  detail: {
-    totalProgress: number;
-  };
-}
-
-// Augment the JSX namespace
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'model-viewer': React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & ModelViewerAttributes,
-        HTMLElement
-      >;
-    }
-  }
-}
+// Import the types from the declaration file
+import { ModelViewerElement, ModelViewerProgressEvent } from '../../../modelar';
 
 const ARModelViewerWithScript: React.FC = () => {
   const modelViewerRef = useRef<ModelViewerElement>(null);
@@ -72,7 +38,9 @@ const ARModelViewerWithScript: React.FC = () => {
     }
   }, []);
 
+  // Rest of the component remains the same
   return (
+    // Existing JSX...
     <div className="relative w-full h-96 md:h-screen md:max-h-[600px] overflow-hidden">
         <model-viewer 
           ref={modelViewerRef}
@@ -82,7 +50,7 @@ const ARModelViewerWithScript: React.FC = () => {
           ar-modes="webxr scene-viewer quick-look" 
           camera-controls 
           tone-mapping="neutral"
-          shadow-intensity="1"
+          shadow-intensity="1" 
           style={{ width: '100%', height: '100%' }}
         >
             <div className="progress-bar hide" slot="progress-bar" ref={progressBarRef}>
