@@ -1,5 +1,7 @@
 "use client"
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 interface TimelineItemProps {
     year: string;
@@ -8,27 +10,40 @@ interface TimelineItemProps {
     imageUrl: string;
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({title, description, imageUrl }) => {
+const TimelineItem: React.FC<TimelineItemProps> = ({year, title, description, imageUrl }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className="timeline-item container mx-auto my-5 px-4 sm:px-6 lg:px-8 max-w-2xl">
-            <div className="border border-gray-300 rounded-lg shadow-md">
-            <div className="timeline-header flex justify-between items-center cursor-pointer p-4" onClick={() => setIsOpen(!isOpen)}>
-                <div>
-                <h2 className="text-lg sm:text-xl lg:text-2xl">{title}</h2>
+            <motion.div 
+                className="border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg overflow-hidden"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+            >
+                <div 
+                    className="timeline-header flex justify-between items-center cursor-pointer p-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300" 
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    <div>
+                        <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-gray-100">{title}</h2>
+                    </div>
+                    <span className="text-2xl text-gray-900 dark:text-gray-100">
+                        {isOpen ? <FaChevronUp /> : <FaChevronDown />}
+                    </span>
                 </div>
-                <span className="text-2xl">{isOpen ? '^' : 'v'}</span>
-            </div>
-            {isOpen && (
-                <div className="timeline-content mt-2 p-4 text-center">
-                <p className="text-sm sm:text-base lg:text-lg">This is some additional text above the timeline content.</p>
-                <img src={imageUrl} alt={title} className="max-w-full h-auto rounded-lg mx-auto" />
-                <hr className="my-4" />
-                <p className="mt-2 text-sm sm:text-base lg:text-lg">{description}</p>
-                </div>
-            )}
-            </div>
+                <motion.div 
+                    className="timeline-content text-center bg-white dark:bg-gray-900"
+                    initial={{ maxHeight: 0, opacity: 0 }}
+                    animate={{ maxHeight: isOpen ? '1000px' : 0, opacity: isOpen ? 1 : 0 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                    <img src={imageUrl} alt={title} className="p-4 max-w-full h-auto rounded-lg mx-auto shadow-sm" />
+                    <hr className="my-4 border-gray-300 dark:border-gray-700" />
+                    <strong className='mt-2 text-md sm:text-lg font-bold lg:text-xl text-gray-900 dark:text-gray-100'>Year: {year}</strong>
+                    <p className="mt-2 py-2 text-sm sm:text-base lg:text-lg text-gray-700 dark:text-gray-300">{description}</p>
+                </motion.div>
+            </motion.div>
         </div>
     );
 };

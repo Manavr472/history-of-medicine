@@ -55,7 +55,9 @@ const Hero = () => {
           <p className="text-base md:text-xl text-white max-w-xl md:max-w-2xl text-center">
           Step into the past and explore the fascinating evolution of medical implants. Our virtual museum offers an immersive experience that brings history to life through interactive 3D models.
           </p>
-          <button className="bg-yellow-500 text-black font-semibold px-4 py-2 mt-4 md:mt-8 rounded-full hover:bg-yellow-600"><Link href="../xrmuseum">Explore Now</Link></button>
+            <button className="inline-block mt-6 bg-gradient-to-r from-yellow-600 to-yellow-400 dark:from-yellow-200 dark:to-yellow-800 text-black px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:from-yellow-400 hover:to-yellow-600 transition duration-500 transform hover:scale-105">
+            <Link href="../xrmuseum">Explore Now</Link>
+            </button>
         </motion.div>
         </AnimatePresence>
       </div>
