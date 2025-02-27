@@ -109,7 +109,7 @@ const models = [
           camera-controls 
           tone-mapping="neutral"
           shadow-intensity="1" 
-          style={{ width: '100%', height: '80%', marginTop: '-10%' }}
+          style={{ width: '100%', height: '100%', marginTop: '-10%' }}
         >
             <div className="progress-bar hide" slot="progress-bar" ref={progressBarRef}>
             <div className="update-bar" ref={updateBarRef}></div>
