@@ -56,12 +56,9 @@ const ARModelViewerWithScript: React.FC = () => {
             <div className="progress-bar hide" slot="progress-bar" ref={progressBarRef}>
                 <div className="update-bar" ref={updateBarRef}></div>
             </div>
-            <button slot="ar-button" id="ar-button">
+            <button className="slot ar-button" id="slot ar-button">
                 View in your space
             </button>
-            <div id="ar-prompt">
-                <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="AR interaction hand icon" />
-            </div>
         </model-viewer>
     </div>
   );
