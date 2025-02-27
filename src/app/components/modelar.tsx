@@ -1,29 +1,40 @@
 import React, { useEffect, useRef } from 'react';
-// Keep only one method to import model-viewer
 import '@google/model-viewer';
 
-declare global {
-    namespace JSX {
-      interface IntrinsicElements {
-        'model-viewer': React.DetailedHTMLProps<
-          React.HTMLAttributes<HTMLElement> & {
-            src?: string;
-            alt?: string;
-            ar?: boolean;
-            'ar-modes'?: string;
-            'camera-controls'?: boolean;
-            'tone-mapping'?: string;
-            poster?: string;
-            'shadow-intensity'?: string;
-          },
-          HTMLElement
-        >;
-      }
-    }
-  }
+// Create proper type definitions for model-viewer
+type ModelViewerAttributes = {
+  src?: string;
+  alt?: string;
+  ar?: boolean;
+  'ar-modes'?: string;
+  'camera-controls'?: boolean;
+  'tone-mapping'?: string;
+  poster?: string;
+  'shadow-intensity'?: string;
+};
 
+// Extend HTMLElement with required model-viewer props
 interface ModelViewerElement extends HTMLElement {
   loading: boolean;
+}
+
+// Define the progress event interface
+interface ModelViewerProgressEvent extends Event {
+  detail: {
+    totalProgress: number;
+  };
+}
+
+// Augment the JSX namespace
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'model-viewer': React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement> & ModelViewerAttributes,
+        HTMLElement
+      >;
+    }
+  }
 }
 
 const ARModelViewerWithScript: React.FC = () => {
@@ -32,15 +43,13 @@ const ARModelViewerWithScript: React.FC = () => {
   const updateBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Remove the dynamic script import - we're using the static import instead
-    
     // Handle progress bar
     const modelViewer = modelViewerRef.current;
     const progressBar = progressBarRef.current;
     const updateBar = updateBarRef.current;
 
     if (modelViewer && progressBar && updateBar) {
-      const handleProgress = (event: any) => {
+      const handleProgress = (event: ModelViewerProgressEvent) => {
         const progress = event.detail.totalProgress;
         updateBar.style.width = `${progress * 100}%`;
         
@@ -55,11 +64,10 @@ const ARModelViewerWithScript: React.FC = () => {
         }
       };
       
-      modelViewer.addEventListener('progress', handleProgress);
+      modelViewer.addEventListener('progress', handleProgress as EventListener);
       
-      // Clean up with proper reference to the handler function
       return () => {
-        modelViewer.removeEventListener('progress', handleProgress);
+        modelViewer.removeEventListener('progress', handleProgress as EventListener);
       };
     }
   }, []);
