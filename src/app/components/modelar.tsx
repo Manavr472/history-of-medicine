@@ -56,9 +56,7 @@ const ARModelViewerWithScript: React.FC = () => {
             <div className="progress-bar hide" slot="progress-bar" ref={progressBarRef}>
                 <div className="update-bar" ref={updateBarRef}></div>
             </div>
-            <button className="slot ar-button" id="slot ar-button">
-                View in your space
-            </button>
+            <button className="slot ar-button" id="slot ar-button"></button>
         </model-viewer>
     </div>
   );
