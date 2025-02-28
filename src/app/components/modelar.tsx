@@ -138,7 +138,7 @@ const models = [
           camera-controls 
           tone-mapping="neutral"
           shadow-intensity="1" 
-          style={{ width: '100%', height: '65%', marginTop: window.innerWidth < 768 ? '-40%' : '-10%' }}
+          style={{ width: '100%', height: '60%', marginTop: window.innerWidth < 768 ? '-40%' : '-10%' }}
           className="md:mt-[-10%] mt-[-40%]" // Using Tailwind classes for responsive margin
         >
             <div className="progress-bar hide" slot="progress-bar" ref={progressBarRef}>
