@@ -31,6 +31,16 @@ const models = [
         path: "3d-models/depuy_attune.glb",
         description: "The Depuy Attune model demonstrates innovative prosthetic design and functionality, reflecting the latest advancements in orthopedic technology."
     },
+  {
+    name: "Oxford Partial Knee Model",
+    path: "3d-models/oxford_PKRR.glb",
+    description: "The Depuy Attune model demonstrates innovative prosthetic design and functionality, reflecting the latest advancements in orthopedic technology."
+  },
+  {
+    name: "Duacondylar Knee Model",
+    path: "3d-models/duacondylar_knee.glb",
+    description: "The Depuy Attune model demonstrates innovative prosthetic design and functionality, reflecting the latest advancements in orthopedic technology."
+  }
 ];
 
   // Handle model selection
