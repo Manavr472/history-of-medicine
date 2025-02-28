@@ -19,9 +19,11 @@ const Header: React.FC = () => {
 
     return (
         <div className="container flex items-center justify-between p-8 h-24 mx-auto relative z-50">
-            <Link href="/">
-                <img src="https://i.ibb.co/Px3h5MJ/Untitled-design.png" alt="Untitled-design" className="h-12" />
+            <Link href="/" className='flex items-center space-x-2'>
+                {/* <img src="https://i.ibb.co/Px3h5MJ/Untitled-design.png" alt="Untitled-design" className="h-12" /> */}
+                <p className="text-left typographica text-4xl">ItihasaXR.</p>
             </Link>
+            
             <div className='hidden md:flex space-x-20'>
                 {/* <div
                     className="relative"
@@ -46,19 +48,19 @@ const Header: React.FC = () => {
                     )}
                 </div> */}
                 <div className="relative">
-                    <Link href="/surgeoninfo" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                    <Link href="/surgeoninfo" className="minigap text-2xl hover:text-yellow-500 font-semibold focus:outline-none">
                         Surgeon Info
                     </Link>
                 </div>
 
                 <div className="relative">
-                    <Link href="https://xr-museum.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                    <Link href="https://xr-museum.vercel.app/" target="_blank" rel="noopener noreferrer" className="minigap text-2xl hover:text-yellow-500 font-semibold focus:outline-none">
                         XR Museum
                     </Link>
                 </div>
                 
                 <div className="relative">
-                    <Link href="/modelar" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                    <Link href="/modelar" className="minigap text-2xl hover:text-yellow-500 font-semibold focus:outline-none">
                         3D Implants
                     </Link>
                 </div>
@@ -74,7 +76,7 @@ const Header: React.FC = () => {
                 </button>
                 </div> */}
             <div className="relative">
-                    <Link href="/timeline" className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
+                    <Link href="/timeline" className="minigap text-2xl hover:text-yellow-500 font-semibold focus:outline-none">
                         Timeline
                     </Link>
                 </div>
@@ -110,7 +112,7 @@ const Header: React.FC = () => {
             </div>
             {isOpen2 && (
                 <nav className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 dark:bg-black md:hidden z-50">
-                    <Link href="/" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Home</Link>
+                    <Link href="/" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Home</Link>
                     {/* <div className="relative">
                         <button onClick={toggleMenu} className="w-full flex items-center justify-between hover:text-yellow-500 font-semibold focus:outline-none">
                             Specialties
@@ -126,10 +128,10 @@ const Header: React.FC = () => {
                             </div>
                         )}<hr/>
                     </div> */}
-                    <Link href="/surgeoninfo" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Surgeon Info</Link>
-                    <Link href="https://xr-museum.vercel.app/" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>XR Museum</Link>
-                    <Link href="/modelar" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>3D Implants</Link>
-                    <Link href="/timeline" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Timeline</Link>
+                    <Link href="/surgeoninfo" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Surgeon Info</Link>
+                    <Link href="https://xr-museum.vercel.app/" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>XR Museum</Link>
+                    <Link href="/modelar" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>3D Implants</Link>
+                    <Link href="/timeline" className=" minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Timeline</Link>
                     {/* <div className="relative">
                         <button onClick={toggleMenu3} className="w-full flex items-center justify-between hover:text-yellow-500 font-semibold focus:outline-none">
                             Profile

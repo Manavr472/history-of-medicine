@@ -31,3 +31,52 @@ body {
   max-width: 1800px;
   margin: 0 auto;
 }
+
+/* Font declarations */
+@font-face {
+  font-family: 'Milker';
+  src: url('/fonts/Milker.otf') format('opentype');
+  font-weight: bold;
+  font-style: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Typographica';
+  src: url('/fonts/Typographica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'StudioSans';
+  src: url('/fonts/StudioSans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Minigap';
+  src: url('/fonts/Minigap.otf') format('opentype');
+  font-weight: bold;
+  font-style: bold;
+  font-display: swap;
+}
+
+.milker{
+  font-family: 'Milker';
+}
+
+.typographica{
+  font-family: 'Typographica';
+}
+
+.minigap{
+  font-family: 'Minigap';
+}
+
+.studio-sans{
+  font-family: 'StudioSans';
+}

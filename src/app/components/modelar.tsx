@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '@google/model-viewer';
-// Import the types from the declaration file
+import font from 'next/font';
 import { ModelViewerElement, ModelViewerProgressEvent } from '../../../modelar';
 
 const ARModelViewerWithScript: React.FC = () => {
@@ -11,35 +11,50 @@ const ARModelViewerWithScript: React.FC = () => {
   
   // Define available models with descriptions
 const models = [
-    { 
-        name: "Glucks Model", 
+    {
+        name: "Glucks Model",
         path: "3d-models/Glucks_Final_Branded.glb",
-        description: "This model represents the Glucks prosthesis, featuring detailed anatomical structures and realistic proportions for an immersive AR experience."
+        description: "The Gluck ivory hinged knee (1891), a pioneering effort by Theophilus Gluck, represents one of the earliest attempts at knee replacement.\nConstructed from ivory, it faced significant challenges with fixation and wear.\nIts historical significance lies in its innovative concept, paving the way for future TKA development.",
+        year: 1891,
+        founder: "Theophilus Gluck"
     },
-    { 
-        name: "Insall Burstein Model", 
+    {
+        name: "Insall Burstein Model",
         path: "3d-models/insall-burstein_1.glb",
-        description: "The Insall Burstein model showcases a detailed representation of a knee prosthesis, highlighting its historical significance and intricate design elements."
+        description: "The Insall-Burstein knee (1978), developed by John Insall and Albert Burstein, introduced the posterior stabilized design.\nThis innovative design utilizes a cam and post mechanism to substitute for the posterior cruciate ligament.\nAimed to address issues of stability, particularly in flexion, that plagued earlier TKA designs.",
+        year: 1978,
+        founder: "John Insall and Albert Burstein"
+
     },
-    { 
+    {
         name: "Smith Nephew Model",    
         path: "3d-models/smith_nephew_branded.glb",
-        description: "This model by Smith Nephew illustrates advanced prosthetic engineering, providing a comprehensive view of its structural and functional features."
+        description: "The Smith & Nephew LEGION Total Knee System (2000s) represents a modern TKA design.\nIt focuses on enhancing kinematics and offering improved fixation options.\nThese advancements aim to provide greater stability and a wider range of motion for patients.",
+        year: 2000, // Approximate - use a more specific year for the LEGION system if possible
+        founder: "Smith & Nephew" // This is a company, not an individual surgeon
+
     },
-    { 
-        name: "Depuy Attune Model", 
+    {
+        name: "Depuy Attune Model",
         path: "3d-models/depuy_attune.glb",
-        description: "The Depuy Attune model demonstrates innovative prosthetic design and functionality, reflecting the latest advancements in orthopedic technology."
+        description: "The DePuy ATTUNE Genesis Knee System (Present) reflects contemporary advancements in TKA.\nIt emphasizes personalized fit and alignment through advanced instrumentation.\nThis system aims to optimize implant positioning and improve long-term outcomes.",
+        year: 2010, // This is DePuy Attune - Genesis I was in the 80s -  put the year accordingly, it can be "Present"
+        founder: "DePuy Synthes" // This represents the company, not individual surgeons
+
     },
   {
     name: "Oxford Partial Knee Model",
     path: "3d-models/oxford_PKRR.glb",
-    description: "The Depuy Attune model demonstrates innovative prosthetic design and functionality, reflecting the latest advancements in orthopedic technology."
+    description: "The Oxford Partial Knee Replacement (Present) is a modern unicompartmental knee arthroplasty.\nDesigned for a less invasive approach, it addresses isolated compartment arthritis.\nThis implant preserves healthy bone and ligaments, offering a targeted treatment option.",
+    year: 2010, // Use "Present" or the specific year of the latest design if possible
+        founder: "Biomet UK" //  Oxford knee earlier, now Biomet, list the correct company accordingly
   },
   {
     name: "Duacondylar Knee Model",
     path: "3d-models/duacondylar_knee.glb",
-    description: "The Depuy Attune model demonstrates innovative prosthetic design and functionality, reflecting the latest advancements in orthopedic technology."
+    description: "The Duocondylar Knee (1971), developed at the Hospital for Special Surgery, was an early design in TKA.\nThis implant preserved both cruciate ligaments and often featured two separate tibial components.\nWhile influential, it faced limitations and served as a precursor to later, more successful designs.",
+        year: 1971,
+        founder: "Chitranjan Ranawat, John Insall, and others at HSS"
   }
 ];
 
@@ -80,32 +95,37 @@ const models = [
   }, []);
 
   return (
-    <div className="relative w-full h-screen md:h-screen md:max-h-[800px] overflow-hidden">
+    <div className="relative w-full h-screen md:h-screen md:max-h-[1200px] overflow-hidden">
         {/* Model Selection and Description Panel */}
-        <div className="relative top-4 left-4 z-10 bg-white/80 dark:bg-gray-800 backdrop-blur-sm rounded-md p-4 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg md:top-4 md:left-4">
-          <div className="mb-3">
-            <label htmlFor="model-select" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        <div className="container mx-auto px-4 py-6 z-10 justify-center items-center flex flex-col">
+          <div className="mb-2">
+            <label htmlFor="model-select" className="minigap text-center block text-xl text-gray-700 dark:text-gray-300 mb-1">
               Select Model
             </label>
             <select 
               id="model-select"
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm"
+              className="w-full px-3 py-2 max-w-xs text-xl rounded-md bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm border border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:outline-none"
               value={selectedModelIndex} 
               onChange={handleModelChange}
             >
               {models.map((model, index) => (
-            <option key={index} value={index}>
-              {model.name}
-            </option>
+              <option key={index} value={index}>
+                {model.name}
+              </option>
               ))}
             </select>
           </div>
           
           {/* Model Description */}
-          <div className="mt-3 mb-2">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-300">About this model</h3>
-            <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
-              {models[selectedModelIndex].description}
+          <div className="max-w-3xl mt-2 mb-2 text-center">
+            <p className='text-xl mt-2 text-gray-700  dark:text-gray-300'>
+              <span className="font-semibold">Year:</span> {models[selectedModelIndex].year}
+            </p>
+            <p className='text-xl mt-2 text-gray-700 dark:text-gray-300'>
+              <span className="font-semibold">Founder:</span> {models[selectedModelIndex].founder}
+            </p>
+            <p className="mt-1 text-xl mt-2 text-gray-700 dark:text-gray-300">
+              <span className="font-semibold">Description:</span>{models[selectedModelIndex].description}
             </p>
           </div>
         </div>
@@ -119,7 +139,8 @@ const models = [
           camera-controls 
           tone-mapping="neutral"
           shadow-intensity="1" 
-          style={{ width: '100%', height: '75%', marginTop: '-10%' }}
+          style={{ width: '100%', height: '80%', marginTop: window.innerWidth < 768 ? '-40%' : '-10%' }}
+          className="md:mt-[-10%] mt-[-40%]" // Using Tailwind classes for responsive margin
         >
             <div className="progress-bar hide" slot="progress-bar" ref={progressBarRef}>
             <div className="update-bar" ref={updateBarRef}></div>
