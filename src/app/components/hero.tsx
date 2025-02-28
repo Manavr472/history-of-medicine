@@ -106,7 +106,7 @@ const Hero = () => {
         <span className="text-3xl md:text-5xl font-bold text-white mb-2 md:mb-4">
         Discover the
         <span className="twbb-headline-dynamic-wrapper twbb-headline-text-wrapper relative">
-            <TypingAnimation />
+            <span> History </span>
         </span>of Implants
         </span>
         <AnimatePresence>

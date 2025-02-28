@@ -33,7 +33,7 @@ const Landing: React.FC = () => {
 
     return (
         <>
-            <div ref={ref} className="container flex flex-col md:flex-row items-center justify-between text-center p-8 mt-20 mx-auto">
+            <div ref={ref} className="container flex flex-col md:flex-row items-center justify-between text-center px-4 sm:px-8 md:px-12 lg:px-20 py-8 mt-10 md:mt-16 lg:mt-20 mx-auto">
                 <motion.div
                     className="landing-text"
                     initial="hidden"
