@@ -40,8 +40,8 @@ const Landing: React.FC = () => {
                     animate={controls}
                     variants={textVariants}
                 >
-                    <h2 className="text-4xl milker font-bold mb-4">Discover ItihisaXR</h2>
-                    <p className="studio-sans text-xl mb-6">ItihisaXR is committed to revolutionizing education in the medical field by showcasing the history of implants through augmented reality. Our platform allows users to engage with 3D models, making learning interactive and accessible.</p>
+                    <h2 className="text-4xl milker font-bold mb-4">Discover ItihasaXR</h2>
+                    <p className="studio-sans text-xl mb-6">ItihasaXR is committed to revolutionizing education in the medical field by showcasing the history of implants through augmented reality. Our platform allows users to engage with 3D models, making learning interactive and accessible.</p>
                     <p className="studio-sans text-xl mb-6">Explore our detailed timeline to understand the evolution of medical implants and their impact on healthcare. Our timeline feature provides a chronological view of significant milestones and advancements in the field.</p>
                     <div className="studio-sans text-2xl text-center mt-6">
                         <Link href="/timeline">
