@@ -117,13 +117,13 @@ const models = [
           
           {/* Model Description */}
           <div className="max-w-3xl mt-2 mb-2 text-center">
-            <p className='text-xl mt-2 text-gray-700  dark:text-gray-300'>
+            <p className='studio-sans text-xl mt-2 text-gray-700  dark:text-gray-300'>
               <span className="font-semibold">Year:</span> {models[selectedModelIndex].year}
             </p>
-            <p className='text-xl mt-2 text-gray-700 dark:text-gray-300'>
+            <p className='minigap text-xl mt-2 text-gray-700 dark:text-gray-300'>
               <span className="font-semibold">Founder:</span> {models[selectedModelIndex].founder}
             </p>
-            <p className="mt-1 text-xl mt-2 text-gray-700 dark:text-gray-300">
+            <p className="minigap mt-1 text-xl mt-2 text-gray-700 dark:text-gray-300">
               <span className="font-semibold">Description:</span>{models[selectedModelIndex].description}
             </p>
           </div>
