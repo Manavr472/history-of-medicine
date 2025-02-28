@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '@google/model-viewer';
-import font from 'next/font';
 import { ModelViewerElement, ModelViewerProgressEvent } from '../../../modelar';
 
 const ARModelViewerWithScript: React.FC = () => {
