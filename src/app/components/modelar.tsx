@@ -94,7 +94,7 @@ const models = [
   }, []);
 
   return (
-    <div className="relative w-full h-screen md:h-screen md:max-h-[1200px] overflow-hidden">
+    <div className="relative w-full h-screen md:h-screen md:max-h-[1600px] overflow-hidden">
         {/* Model Selection and Description Panel */}
         <div className="container mx-auto px-4 py-6 z-10 justify-center items-center flex flex-col">
           <div className="mb-2">
