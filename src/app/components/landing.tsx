@@ -64,7 +64,7 @@ const Landing: React.FC = () => {
                 >
                     <h2 className="milker text-4xl font-bold mb-8 text-center">Latest Articles</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="article flex flex-col md:flex-row mt-8 p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105">
+                        <div className="article flex flex-col md:flex-row mt-8 p-4 bg-white dark:bg-gray-900 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105">
                             <div className="w-full md:w-1/3 overflow-hidden rounded-lg">
                                 <img src="https://i.ibb.co/QH0rs5P/TKA-timeline.png" alt="Article 1" className="w-full h-full object-cover" />
                             </div>
@@ -74,7 +74,7 @@ const Landing: React.FC = () => {
                                 <p className="text-sm text-blue-500 text-right mt-4"><Link href="/articles/The_History_of_Total_Knee_Arthroplasty">Read more &gt;&gt;</Link></p>
                             </div>
                         </div>
-                        <div className="article flex flex-col md:flex-row mt-8 p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105">
+                        <div className="article flex flex-col md:flex-row mt-8 p-4 bg-white dark:bg-gray-900 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105">
                             <div className="w-full md:w-1/3 overflow-hidden rounded-lg">
                                 <img src="https://i.ibb.co/D4dN1Rf/knee-society.png" alt="Article 2" className="w-full h-full object-cover" />
                             </div>
