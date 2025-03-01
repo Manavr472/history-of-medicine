@@ -98,7 +98,7 @@ const SurgeonInfo: React.FC = () => {
 
     return (
       <div className="container mx-auto p-8">
-        <h2 className="text-4xl font-bold mb-8 text-center">Surgeon Information</h2>
+        <h2 className="milker text-4xl font-bold mb-8 text-center">Surgeon Information</h2>
         {surgeons.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {surgeons.map((surgeon, index) => (
@@ -112,8 +112,8 @@ const SurgeonInfo: React.FC = () => {
             <img className="w-auto h-64  rounded-lg" src={surgeon.image} alt={surgeon.name} />
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{surgeon.name}</h3>
-            <p className="text-gray-700 dark:text-gray-300">{surgeon.description}</p>
+            <h3 className="text-xl milker font-bold mb-2 text-gray-900 dark:text-white">{surgeon.name}</h3>
+            <p className="text-gray-700 minigap dark:text-gray-300">{surgeon.description}</p>
           </div>
           </motion.div>
           ))}

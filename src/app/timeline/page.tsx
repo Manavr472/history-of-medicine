@@ -14,19 +14,19 @@ const TimelineItem: React.FC<TimelineItemProps> = ({year, title, description, im
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="timeline-item container mx-auto my-5 px-4 sm:px-6 lg:px-8 max-w-2xl">
+        <div className="timeline-item flex flex-col items-center justify-center mx-auto my-5 px-4 sm:px-6 lg:px-8">
             <motion.div 
-                className="border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg overflow-hidden"
+                className="text-center justify-center max-w-3xl mt-5 bg-white dark:bg-black rounded-lg shadow-lg overflow-hidden transform pd-8 transition duration-500 hover:scale-105 hover:shadow-lg hover:shadow-purple-500 cursor-pointer"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
             >
                 <div 
-                    className="timeline-header flex justify-between items-center cursor-pointer p-4 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300" 
+                    className="timeline-header flex justify-between items-center cursor-pointer p-4 bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-300" 
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <div>
-                        <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-gray-100">{title}</h2>
+                        <h2 className="milker text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-gray-100">{title}</h2>
                     </div>
                     <span className="text-2xl text-gray-900 dark:text-gray-100">
                         {isOpen ? <FaChevronUp /> : <FaChevronDown />}
@@ -38,10 +38,10 @@ const TimelineItem: React.FC<TimelineItemProps> = ({year, title, description, im
                     animate={{ maxHeight: isOpen ? '1000px' : 0, opacity: isOpen ? 1 : 0 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
-                    <img src={imageUrl} alt={title} className="p-4 max-w-full h-auto rounded-lg mx-auto shadow-sm" />
+                    <img src={imageUrl} alt={title} className="p-4 max-w-full h-auto max-h-[50vh] rounded-lg mx-auto shadow-sm" />
                     <hr className="my-4 border-gray-300 dark:border-gray-700" />
-                    <strong className='mt-2 text-md sm:text-lg font-bold lg:text-xl text-gray-900 dark:text-gray-100'>Year: {year}</strong>
-                    <p className="mt-2 py-2 px-2 text-sm sm:text-base lg:text-lg text-gray-700 dark:text-gray-300">{description}</p>
+                    <strong className='studio-sans mt-2 text-md sm:text-lg font-bold lg:text-xl text-gray-900 dark:text-gray-100'>Year: {year}</strong>
+                    <p className="minigap mt-2 py-2 px-2 text-sm sm:text-base lg:text-lg text-gray-700 dark:text-gray-300">{description}</p>
                 </motion.div>
             </motion.div>
         </div>
