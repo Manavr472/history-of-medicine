@@ -62,7 +62,7 @@ const Landing: React.FC = () => {
                     animate={controls1}
                     variants={articlesVariants}
                 >
-                    <h2 className="text-4xl font-bold mb-8 text-center">Latest Articles</h2>
+                    <h2 className="milker text-4xl font-bold mb-8 text-center">Latest Articles</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="article flex flex-col md:flex-row mt-8 p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105">
                             <div className="w-full md:w-1/3 overflow-hidden rounded-lg">
