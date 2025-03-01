@@ -94,7 +94,7 @@ const models = [
   }, []);
 
   return (
-    <div className="relative w-full h-screen md:h-screen md:max-h-[1600px] overflow-hidden">
+    <div className="relative h-screen w-full md:h-[calc(100vh+10rem)]">
         {/* Model Selection and Description Panel */}
         <div className="container mx-auto px-4 py-6 z-10 justify-center items-center flex flex-col">
           <div className="mb-2">
@@ -138,8 +138,8 @@ const models = [
           camera-controls 
           tone-mapping="neutral"
           shadow-intensity="1" 
-          style={{ width: '100%', height: '60%', marginTop: window.innerWidth < 768 ? '-40%' : '-10%' }}
-          className="md:mt-[-10%] mt-[-40%]" // Using Tailwind classes for responsive margin
+          style={{ width: '100%', height: '100%' }}
+          className="md:mt-[-10%] mt-[-40%] z-10" // Using Tailwind classes for responsive margin
         >
             <div className="progress-bar hide" slot="progress-bar" ref={progressBarRef}>
             <div className="update-bar" ref={updateBarRef}></div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-        <footer style={{ padding: '20px', textAlign: 'center'}}>
+        <footer className='relative mt-20' style={{ padding: '20px', textAlign: 'center'}}>
             <hr/>
             <br />
             <p>&copy; 2024 Itihasa XR. All rights reserved.</p>
