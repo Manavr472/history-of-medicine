@@ -64,23 +64,23 @@ const Landing: React.FC = () => {
                 >
                     <h2 className="text-4xl font-bold mb-8 text-center">Latest Articles</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="article flex mt-8 p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105">
-                            <div className="w-1/3 overflow-hidden rounded-lg">
+                        <div className="article flex flex-col md:flex-row mt-8 p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105">
+                            <div className="w-full md:w-1/3 overflow-hidden rounded-lg">
                                 <img src="https://i.ibb.co/QH0rs5P/TKA-timeline.png" alt="Article 1" className="w-full h-full object-cover" />
                             </div>
-                            <div className="w-2/3 pl-4">
-                                <h3 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-gray-100">The History of Total Knee Arthroplasty</h3>
-                                <p className="text-sm text-gray-700 dark:text-gray-300">Total knee arthroplasty (TKA), commonly known as total knee replacement, has become one of the most successful surgical procedures in modern medicine.</p>
+                            <div className="w-full md:w-2/3 mt-4 md:mt-0 md:pl-4">
+                                <h3 className="milker text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">The History of Total Knee Arthroplasty</h3>
+                                <p className="minigap text-sm text-gray-700 dark:text-gray-300">Total knee arthroplasty (TKA), commonly known as total knee replacement, has become one of the most successful surgical procedures in modern medicine.</p>
                                 <p className="text-sm text-blue-500 text-right mt-4"><Link href="/articles/The_History_of_Total_Knee_Arthroplasty">Read more &gt;&gt;</Link></p>
                             </div>
                         </div>
-                        <div className="article flex mt-8 p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105">
-                            <div className="w-1/3 overflow-hidden rounded-lg">
+                        <div className="article flex flex-col md:flex-row mt-8 p-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg transform transition-transform duration-300 hover:scale-105">
+                            <div className="w-full md:w-1/3 overflow-hidden rounded-lg">
                                 <img src="https://i.ibb.co/D4dN1Rf/knee-society.png" alt="Article 2" className="w-full h-full object-cover" />
                             </div>
-                            <div className="w-2/3 pl-4">
-                                <h3 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-gray-100">The Knee Society: A Driving Force in the Evolution of Total Knee Arthroplasty</h3>
-                                <p className="text-sm text-gray-700 dark:text-gray-300">Founded in 1983 amidst a burgeoning era of TKA innovation, the Society emerged from a recognized need: to bring order and scientific rigor to a field rapidly expanding with new implant designs and surgical techniques.</p>
+                            <div className="w-full md:w-2/3 mt-4 md:mt-0 md:pl-4">
+                                <h3 className="milker text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">The Knee Society: A Driving Force in the Evolution of Total Knee Arthroplasty</h3>
+                                <p className="minigap text-sm text-gray-700 dark:text-gray-300">Founded in 1983 amidst a burgeoning era of TKA innovation, the Society emerged from a recognized need: to bring order and scientific rigor to a field rapidly expanding with new implant designs and surgical techniques.</p>
                                 <p className="text-sm text-blue-500 text-right mt-4"><Link href="/articles/The_Knee_Society">Read more &gt;&gt;</Link></p>
                             </div>
                         </div>
