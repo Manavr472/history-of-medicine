@@ -53,7 +53,7 @@ const Header: React.FC = () => {
                     </Link>
                 </div>
 
-                <div className="relative">
+                {/* <div className="relative">
                     <Link href="https://xr-museum.vercel.app/" target="_blank" rel="noopener noreferrer" className="minigap text-2xl hover:text-yellow-500 font-semibold focus:outline-none">
                         XR Museum
                     </Link>
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
                     <Link href="/modelar" className="minigap text-2xl hover:text-yellow-500 font-semibold focus:outline-none">
                         3D Implants
                     </Link>
-                </div>
+                </div> */}
 
                 {/* <div className="relative">
                     <input
@@ -128,8 +128,8 @@ const Header: React.FC = () => {
                             </div>
                         )}<hr/>
                     </div> */}
-                    <Link href="/surgeoninfo" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Surgeon Info</Link>
-                    <Link href="https://xr-museum.vercel.app/" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>XR Museum</Link>
+                    {/* <Link href="/surgeoninfo" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Surgeon Info</Link>
+                    <Link href="https://xr-museum.vercel.app/" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>XR Museum</Link> */}
                     <Link href="/modelar" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>3D Implants</Link>
                     <Link href="/timeline" className=" minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Timeline</Link>
                     {/* <div className="relative">
