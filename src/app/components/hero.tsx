@@ -40,14 +40,14 @@ const Hero = () => {
           <p className="studio-sans text-base md:text-xl text-white max-w-xl md:max-w-3xl text-center">
           Step into the past and explore the fascinating evolution of medical implants. Our virtual museum offers an immersive experience that brings history to life through interactive 3D models.
           </p>
-            <div className="flex justify-center space-x-4 mt-6">
+            {/* <div className="flex justify-center space-x-4 mt-6">
             <button className="studio-sans text-3xl inline-block bg-gradient-to-r from-yellow-600 to-yellow-400 dark:from-yellow-200 dark:to-yellow-800 text-black px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:from-yellow-400 hover:to-yellow-600 transition duration-500 transform hover:scale-105">
                 <Link href="https://xr-museum.vercel.app/" target="_blank" rel="noopener noreferrer">Explore Museum</Link>
             </button>
             <button className="studio-sans text-3xl inline-block bg-gradient-to-r from-yellow-600 to-yellow-400 dark:from-yellow-200 dark:to-yellow-800 text-black px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:from-yellow-400 hover:to-yellow-600 transition duration-500 transform hover:scale-105">
               <Link href="../modelar">Explore 3D Implants</Link>
             </button>
-            </div>
+            </div> */}
         </motion.div>
         </AnimatePresence>
       </div>
