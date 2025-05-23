@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 
 const Hero = () => {
   const [currentPage] = useState(0);
