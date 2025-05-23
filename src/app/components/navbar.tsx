@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 const Header: React.FC = () => {
-    // const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
     // const [isOpen3, setIsOpen3] = useState(false);
 
-    // const toggleMenu = () => {
-    //     setIsOpen(!isOpen);
-    // };
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
     const toggleMenu2 = () => {
         setIsOpen2(!isOpen2);
     };
@@ -20,18 +20,19 @@ const Header: React.FC = () => {
     return (
         <div className="container flex items-center justify-between p-8 h-24 mx-auto relative z-50">
             <Link href="/" className='flex items-center space-x-2'>
-                {/* <img src="https://i.ibb.co/Px3h5MJ/Untitled-design.png" alt="Untitled-design" className="h-12" /> */}
-                <p className="text-left typographica text-4xl">ItihasaXR.</p>
+                <img src="/images/hom-logo.png" alt="Untitled-design" className="h-12" />
+                {/* <p className="text-left typographica text-4xl">ItihasaXR.</p> */}
             </Link>
             
             <div className='hidden md:flex space-x-20'>
-                {/* <div
+                <div
                     className="relative"
-                    onMouseEnter={() => setIsOpen(true)}
+                    // onMouseEnter={() => setIsOpen(true)}
                     onMouseLeave={() => setIsOpen(false)}
+                    onClick={() => setIsOpen(true)}
                 >
-                    <button onClick={toggleMenu} className="text-xl hover:text-yellow-500 font-semibold focus:outline-none">
-                        Specialties
+                    <button onClick={toggleMenu} className="text-2xl minigap hover:text-yellow-500 font-semibold focus:outline-none">
+                        History
                     </button>
                     {isOpen && (
                         <div
@@ -40,13 +41,13 @@ const Header: React.FC = () => {
                             onMouseLeave={() => setIsOpen(false)}
                         >
                             <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                                <Link href="/specialties/orthopedics" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Orthopedics</Link>
-                                <Link href="/specialties/neurosurgery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Neurosurgery</Link>
-                                <Link href="/specialties/cardiac-surgery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Cardiac Surgery</Link>
+                                <Link href="/history/preMedical" className="block minigap px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Pre Medical</Link>
+                                <Link href="/history/paraMedical" className="block minigap px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Para Medical</Link>
+                                <Link href="/history/clinical" className="block minigap px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Clinical Medical</Link>
                             </div>
                         </div>
                     )}
-                </div> */}
+                </div>
                 <div className="relative">
                     <Link href="/surgeoninfo" className="minigap text-2xl hover:text-yellow-500 font-semibold focus:outline-none">
                         Surgeon Info
@@ -113,24 +114,24 @@ const Header: React.FC = () => {
             {isOpen2 && (
                 <nav className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center space-y-4 py-4 dark:bg-black md:hidden z-50">
                     <Link href="/" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Home</Link>
-                    {/* <div className="relative">
-                        <button onClick={toggleMenu} className="w-full flex items-center justify-between hover:text-yellow-500 font-semibold focus:outline-none">
-                            Specialties
+                    <div className="relative">
+                        <button onClick={toggleMenu} className="minigap text-xl w-full flex items-center justify-between hover:text-yellow-500 font-semibold focus:outline-none">
+                            History
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
                         {isOpen && (
-                            <div className="w-full mt-2 bg-white flex flex-col items-center space-y-4 dark:bg-black">
-                                <Link href="/specialties/orthopedics" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Orthopedics</Link>
-                                <Link href="/specialties/neurosurgery" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Neurosurgery</Link>
-                                <Link href="/specialties/cardiac-surgery" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Cardiac Surgery</Link>
+                            <div className="minigap text-xl w-full mt-2 bg-white flex flex-col items-center space-y-4 dark:bg-black">
+                                <Link href="/history/preMedical" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Pre Medical</Link>
+                                <Link href="/history/paraMedical" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Para Medical</Link>
+                                <Link href="/history/clinical" className="hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Clinical Medical</Link>
                             </div>
                         )}<hr/>
-                    </div> */}
-                    {/* <Link href="/surgeoninfo" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Surgeon Info</Link>
-                    <Link href="https://xr-museum.vercel.app/" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>XR Museum</Link> */}
-                    <Link href="/modelar" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>3D Implants</Link>
+                    </div>
+                    <Link href="/surgeoninfo" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Surgeon Info</Link>
+                    { /*<Link href="https://xr-museum.vercel.app/" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>XR Museum</Link> */}
+                    {/* <Link href="/modelar" className="minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>3D Implants</Link> */}
                     <Link href="/timeline" className=" minigap text-xl hover:text-yellow-500 font-semibold" onClick={() => setIsOpen2(false)}>Timeline</Link>
                     {/* <div className="relative">
                         <button onClick={toggleMenu3} className="w-full flex items-center justify-between hover:text-yellow-500 font-semibold focus:outline-none">

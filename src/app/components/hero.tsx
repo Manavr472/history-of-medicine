@@ -27,7 +27,7 @@ const Hero = () => {
         <span className="milker twbb-headline-dynamic-wrapper twbb-headline-text-wrapper relative">
             <span> History </span>
         </span>
-        <span className="milker">of Implants</span>
+        <span className="milker">of Medicine</span>
         </span>
         <AnimatePresence>
         <motion.div
@@ -37,9 +37,9 @@ const Hero = () => {
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         >
-          <p className="studio-sans text-base md:text-xl text-white max-w-xl md:max-w-3xl text-center">
-          Step into the past and explore the fascinating evolution of medical implants. Our virtual museum offers an immersive experience that brings history to life through interactive 3D models.
-          </p>
+            <p className="studio-sans text-base md:text-xl text-white max-w-xl md:max-w-3xl text-center">
+              Embark on an immersive journey through time and explore the stories that shaped our world. Discover history in a whole new way with engaging narratives and visuals.
+            </p>
             {/* <div className="flex justify-center space-x-4 mt-6">
             <button className="studio-sans text-3xl inline-block bg-gradient-to-r from-yellow-600 to-yellow-400 dark:from-yellow-200 dark:to-yellow-800 text-black px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:from-yellow-400 hover:to-yellow-600 transition duration-500 transform hover:scale-105">
                 <Link href="https://xr-museum.vercel.app/" target="_blank" rel="noopener noreferrer">Explore Museum</Link>
