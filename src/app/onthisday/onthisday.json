@@ -1,0 +1,903 @@
+[
+    {
+        "date": "01-12",
+        "title": "National Youth Day (India)",
+        "description": "Commemorates the birth anniversary of Swami Vivekananda and celebrates youth empowerment.",
+        "importance": [
+            "Inspires youth to contribute to nation-building.",
+            "Promotes the teachings and philosophy of Swami Vivekananda."
+        ]
+    },
+    {
+        "date": "02-11",
+        "title": "International Day of Women and Girls in Science",
+        "description": "Promotes full and equal access to and participation in science for women and girls.",
+        "importance": [
+            "Encourages gender equality in STEM fields.",
+            "Highlights the achievements of women scientists."
+        ]
+    },
+    {
+        "date": "02-21",
+        "title": "International Mother Language Day",
+        "description": "Promotes linguistic and cultural diversity and multilingualism.",
+        "importance": [
+            "Raises awareness of the importance of mother languages.",
+            "Encourages preservation of linguistic heritage."
+        ]
+    },
+    {
+        "date": "03-15",
+        "title": "World Consumer Rights Day",
+        "description": "Raises global awareness about consumer rights and needs.",
+        "importance": [
+            "Promotes consumer protection.",
+            "Highlights issues affecting consumers worldwide."
+        ]
+    },
+    {
+        "date": "03-20",
+        "title": "International Day of Happiness",
+        "description": "Recognizes the importance of happiness and well-being as universal goals.",
+        "importance": [
+            "Promotes happiness as a fundamental human goal.",
+            "Encourages policies that improve well-being."
+        ]
+    },
+    {
+        "date": "04-02",
+        "title": "World Autism Awareness Day",
+        "description": "Raises awareness about autism spectrum disorder.",
+        "importance": [
+            "Promotes understanding and acceptance of people with autism.",
+            "Encourages early diagnosis and intervention."
+        ]
+    },
+    {
+        "date": "04-22",
+        "title": "Earth Day",
+        "description": "Promotes environmental protection and sustainability.",
+        "importance": [
+            "Raises awareness about environmental issues.",
+            "Encourages actions to protect the planet."
+        ]
+    },
+    {
+        "date": "05-08",
+        "title": "World Red Cross and Red Crescent Day",
+        "description": "Celebrates the principles of the International Red Cross and Red Crescent Movement.",
+        "importance": [
+            "Honors humanitarian efforts worldwide.",
+            "Raises awareness about the work of the Red Cross and Red Crescent."
+        ]
+    },
+    {
+        "date": "05-12",
+        "title": "International Nurses Day",
+        "description": "Honors the contributions of nurses to healthcare.",
+        "importance": [
+            "Recognizes the dedication of nurses.",
+            "Raises awareness about the role of nursing in society."
+        ]
+    },
+    {
+        "date": "06-05",
+        "title": "World Environment Day",
+        "description": "Encourages worldwide awareness and action for the protection of the environment.",
+        "importance": [
+            "Promotes environmental conservation.",
+            "Highlights urgent environmental issues."
+        ]
+    },
+    {
+        "date": "06-21",
+        "title": "International Day of Yoga",
+        "description": "Promotes the physical, mental, and spiritual benefits of practicing yoga.",
+        "importance": [
+            "Encourages healthy living through yoga.",
+            "Raises awareness about the benefits of yoga."
+        ]
+    },
+    {
+        "date": "10-10",
+        "title": "World Mental Health Day",
+        "description": "Raises awareness about mental health issues and promotes mental well-being.",
+        "importance": [
+            "Encourages open discussions about mental health.",
+            "Promotes access to mental health care."
+        ]
+    },
+    {
+        "date": "11-14",
+        "title": "World Diabetes Day",
+        "description": "Raises awareness about diabetes and its impact on health.",
+        "importance": [
+            "Promotes education about diabetes prevention and management.",
+            "Encourages healthy lifestyle choices."
+        ]
+    },
+    {
+        "date": "12-01",
+        "title": "World AIDS Day",
+        "description": "Raises awareness about HIV/AIDS and commemorates those who have died from the disease.",
+        "importance": [
+            "Promotes understanding and support for people living with HIV/AIDS.",
+            "Encourages efforts to prevent the spread of HIV."
+        ]
+    },
+    {
+        "date": "02-04",
+        "title": "World Cancer Day",
+        "description": "Raises awareness about cancer and encourages its prevention, detection, and treatment.",
+        "importance": [
+            "Promotes cancer education and research.",
+            "Encourages early detection and healthy lifestyle choices."
+        ]
+    },
+    {
+        "date": "03-24",
+        "title": "World Tuberculosis Day",
+        "description": "Raises public awareness about the devastating health, social, and economic consequences of tuberculosis.",
+        "importance": [
+            "Promotes efforts to end the global TB epidemic.",
+            "Encourages early diagnosis and treatment."
+        ]
+    },
+    {
+        "date": "04-07",
+        "title": "World Health Day",
+        "description": "Marks the founding of the World Health Organization and draws attention to global health issues.",
+        "importance": [
+            "Raises awareness about important health topics.",
+            "Encourages governments and organizations to take action."
+        ]
+    },
+    {
+        "date": "09-29",
+        "title": "World Heart Day",
+        "description": "Raises awareness about cardiovascular diseases and promotes heart-healthy living.",
+        "importance": [
+            "Encourages prevention and control of heart disease.",
+            "Promotes healthy lifestyle choices."
+        ]
+    },
+    {
+        "date": "12-03",
+        "title": "International Day of Persons with Disabilities",
+        "description": "Promotes the rights and well-being of persons with disabilities in all spheres of society.",
+        "importance": [
+            "Raises awareness about disability issues.",
+            "Encourages inclusion and accessibility in healthcare."
+        ]
+    },
+    {
+        "date": "01-04",
+        "title": "World Braille Day",
+        "description": "Raises awareness about the importance of Braille as a means of communication for blind and partially sighted people.",
+        "importance": [
+            "Promotes equal access to healthcare information for visually impaired individuals.",
+            "Highlights the importance of inclusive healthcare communication."
+        ]
+    },
+    {
+        "date": "01-27",
+        "title": "World Leprosy Day",
+        "description": "Raises awareness about leprosy (Hansen's disease) and promotes the dignity of people affected by it.",
+        "importance": [
+            "Combats stigma associated with this curable disease.",
+            "Encourages early diagnosis and treatment to prevent disabilities."
+        ]
+    },
+    {
+        "date": "01-30",
+        "title": "World Neglected Tropical Diseases Day",
+        "description": "Highlights the global effort to prevent and control neglected tropical diseases (NTDs).",
+        "importance": [
+            "Brings attention to diseases affecting over 1 billion people worldwide.",
+            "Promotes increased investment in treatment and prevention programs."
+        ]
+    },
+    {
+        "date": "02-15",
+        "title": "International Childhood Cancer Day",
+        "description": "Raises awareness about childhood cancer and shows support for children with cancer, survivors, and their families.",
+        "importance": [
+            "Promotes early detection and proper diagnosis of childhood cancers.",
+            "Advocates for better access to treatment for all children with cancer."
+        ]
+    },
+    {
+        "date": "03-03",
+        "title": "World Hearing Day",
+        "description": "Promotes ear and hearing care across the world and raises awareness about hearing loss prevention.",
+        "importance": [
+            "Encourages regular hearing screening and early intervention.",
+            "Advocates for integration of ear and hearing care services into primary healthcare."
+        ]
+    },
+    {
+        "date": "03-10",
+        "title": "World Kidney Day",
+        "description": "Raises awareness about the importance of kidney health and reducing the impact of kidney disease.",
+        "importance": [
+            "Promotes preventive behaviors like hydration and regular exercise.",
+            "Encourages early screening for those with risk factors."
+        ]
+    },
+    {
+        "date": "03-30",
+        "title": "World Bipolar Day",
+        "description": "Raises awareness about bipolar disorder and works to eliminate social stigma.",
+        "importance": [
+            "Educates the public about this often misunderstood mental health condition.",
+            "Promotes support and treatment options for affected individuals."
+        ]
+    },
+    {
+        "date": "04-11",
+        "title": "World Parkinson's Day",
+        "description": "Raises awareness about Parkinson's disease and its impact on people's lives.",
+        "importance": [
+            "Promotes understanding of this progressive neurological disorder.",
+            "Advocates for better care and support for patients and caregivers."
+        ]
+    },
+    {
+        "date": "04-17",
+        "title": "World Hemophilia Day",
+        "description": "Increases awareness of hemophilia and other bleeding disorders.",
+        "importance": [
+            "Highlights the need for better diagnosis and access to care.",
+            "Promotes advocacy for people with inherited bleeding disorders."
+        ]
+    },
+    {
+        "date": "04-25",
+        "title": "World Malaria Day",
+        "description": "Highlights the need for continued investment and political commitment for malaria prevention and control.",
+        "importance": [
+            "Promotes malaria prevention strategies in endemic regions.",
+            "Highlights ongoing research for better treatments and vaccines."
+        ]
+    },
+    {
+        "date": "05-15",
+        "title": "World Asthma Day",
+        "description": "Raises awareness about asthma and how it affects people's lives.",
+        "importance": [
+            "Promotes better asthma management and treatment options.",
+            "Educates about triggers and environmental factors affecting asthma."
+        ]
+    },
+    {
+        "date": "05-17",
+        "title": "World Hypertension Day",
+        "description": "Promotes public awareness of hypertension (high blood pressure) and encourages prevention, detection, and control.",
+        "importance": [
+            "Raises awareness about this major risk factor for cardiovascular disease.",
+            "Encourages regular blood pressure monitoring and healthy lifestyle choices."
+        ]
+    },
+    {
+        "date": "05-25",
+        "title": "World Thyroid Day",
+        "description": "Promotes awareness and understanding of thyroid health and the prevention and treatment of thyroid diseases.",
+        "importance": [
+            "Educates about symptoms of thyroid disorders that often go undiagnosed.",
+            "Emphasizes the importance of proper thyroid function for overall health."
+        ]
+    },
+    {
+        "date": "05-31",
+        "title": "World No Tobacco Day",
+        "description": "Highlights the health risks associated with tobacco use and advocates for effective policies to reduce consumption.",
+        "importance": [
+            "Promotes prevention of tobacco-related diseases like cancer and COPD.",
+            "Advocates for tobacco control policies worldwide."
+        ]
+    },
+    {
+        "date": "06-14",
+        "title": "World Blood Donor Day",
+        "description": "Thanks voluntary blood donors and raises awareness about the need for regular blood donations.",
+        "importance": [
+            "Promotes safe blood supplies for medical treatments and emergencies.",
+            "Educates about the life-saving importance of blood donation."
+        ]
+    },
+    {
+        "date": "07-28",
+        "title": "World Hepatitis Day",
+        "description": "Raises awareness about viral hepatitis and promotes prevention, diagnosis, and treatment.",
+        "importance": [
+            "Educates about the different types of hepatitis and their transmission.",
+            "Promotes vaccination and testing for hepatitis B and C."
+        ]
+    },
+    {
+        "date": "08-01",
+        "title": "World Lung Cancer Day",
+        "description": "Raises awareness about the causes and treatment of lung cancer and the importance of early detection.",
+        "importance": [
+            "Promotes understanding of risk factors beyond smoking.",
+            "Advocates for early screening and improved treatment options."
+        ]
+    },
+    {
+        "date": "08-31",
+        "title": "International Overdose Awareness Day",
+        "description": "Raises awareness of overdose and reduces the stigma of drug-related deaths.",
+        "importance": [
+            "Promotes prevention and education about opioid overdose.",
+            "Remembers those who have died from drug overdose and acknowledges the grief of families."
+        ]
+    },
+    {
+        "date": "09-04",
+        "title": "World Sexual Health Day",
+        "description": "Promotes awareness about sexual health, education, and rights.",
+        "importance": [
+            "Addresses STI prevention and reproductive health education.",
+            "Promotes access to sexual healthcare services worldwide."
+        ]
+    },
+    {
+        "date": "09-08",
+        "title": "World Physiotherapy Day",
+        "description": "Celebrates the work of physiotherapists in keeping people well, mobile, and independent.",
+        "importance": [
+            "Highlights the role of physical therapy in rehabilitation and pain management.",
+            "Promotes movement for health and wellbeing across the lifespan."
+        ]
+    },
+    {
+        "date": "09-10",
+        "title": "World Suicide Prevention Day",
+        "description": "Promotes worldwide commitment and action to prevent suicides.",
+        "importance": [
+            "Raises awareness about suicide as a major public health problem.",
+            "Encourages mental health support and crisis intervention strategies."
+        ]
+    },
+    {
+        "date": "09-17",
+        "title": "World Patient Safety Day",
+        "description": "Enhances global understanding of patient safety and promotes patient safety actions.",
+        "importance": [
+            "Addresses medical errors and healthcare-associated harm.",
+            "Promotes safety protocols and systems in healthcare settings."
+        ]
+    },
+    {
+        "date": "09-21",
+        "title": "World Alzheimer's Day",
+        "description": "Raises awareness about Alzheimer's disease and dementia.",
+        "importance": [
+            "Promotes understanding of cognitive decline and dementia care.",
+            "Supports research efforts for treatment and prevention."
+        ]
+    },
+    {
+        "date": "09-26",
+        "title": "World Contraception Day",
+        "description": "Improves awareness of contraception and enables young people to make informed choices on their sexual and reproductive health.",
+        "importance": [
+            "Promotes family planning and reproductive health education.",
+            "Addresses barriers to contraception access worldwide."
+        ]
+    },
+    {
+        "date": "10-01",
+        "title": "International Day of Older Persons",
+        "description": "Raises awareness about issues affecting the elderly and appreciates the contributions they make to society.",
+        "importance": [
+            "Addresses healthcare needs specific to aging populations.",
+            "Promotes dignity and access to care for elderly individuals."
+        ]
+    },
+    {
+        "date": "10-08",
+        "title": "World Hospice and Palliative Care Day",
+        "description": "Builds awareness and understanding of the needs of people living with life-limiting illnesses.",
+        "importance": [
+            "Promotes access to palliative care as a human right.",
+            "Educates about end-of-life care and pain management."
+        ]
+    },
+    {
+        "date": "10-12",
+        "title": "World Arthritis Day",
+        "description": "Raises awareness about rheumatic and musculoskeletal diseases.",
+        "importance": [
+            "Promotes early diagnosis and access to treatment for arthritis.",
+            "Highlights the impact of arthritis on quality of life and productivity."
+        ]
+    },
+    {
+        "date": "10-15",
+        "title": "Global Handwashing Day",
+        "description": "Increases awareness about the importance of handwashing with soap as an effective way to prevent diseases.",
+        "importance": [
+            "Promotes a simple, cost-effective method of infection prevention.",
+            "Highlights the role of hand hygiene in reducing healthcare-associated infections."
+        ]
+    },
+    {
+        "date": "10-16",
+        "title": "World Food Day",
+        "description": "Promotes worldwide awareness and action for those who suffer from hunger and for the need to ensure food security and nutritious diets for all.",
+        "importance": [
+            "Addresses malnutrition as a major public health issue.",
+            "Promotes sustainable food systems for better health outcomes."
+        ]
+    },
+    {
+        "date": "10-17",
+        "title": "World Trauma Day",
+        "description": "Highlights the increasing rate of accidents and injuries causing death and disability worldwide.",
+        "importance": [
+            "Promotes injury prevention and emergency response systems.",
+            "Raises awareness about trauma care and rehabilitation services."
+        ]
+    },
+    {
+        "date": "10-20",
+        "title": "World Osteoporosis Day",
+        "description": "Raises global awareness of the prevention, diagnosis, and treatment of osteoporosis.",
+        "importance": [
+            "Promotes bone health and fracture prevention strategies.",
+            "Highlights the importance of calcium, vitamin D, and exercise for bone health."
+        ]
+    },
+    {
+        "date": "11-12",
+        "title": "World Pneumonia Day",
+        "description": "Raises awareness about pneumonia, the world's leading infectious killer of children under five.",
+        "importance": [
+            "Promotes pneumonia prevention through vaccination and environmental measures.",
+            "Advocates for accessible diagnosis and treatment worldwide."
+        ]
+    },
+    {
+        "date": "11-17",
+        "title": "World Prematurity Day",
+        "description": "Raises awareness of the challenges of preterm birth and the impacts it has on families.",
+        "importance": [
+            "Highlights the specialized medical care needed for premature infants.",
+            "Promotes prenatal care to prevent preterm births."
+        ]
+    },
+    {
+        "date": "12-09",
+        "title": "Universal Health Coverage Day",
+        "description": "Promotes the goal of all people receiving quality health services without suffering financial hardship.",
+        "importance": [
+            "Advocates for healthcare as a fundamental human right.",
+            "Promotes equitable access to essential health services globally."
+        ]
+    },
+    {
+        "date": "01-15",
+        "title": "World Religion Day",
+        "description": "Promotes interfaith understanding and harmony between religions.",
+        "importance": [
+            "Encourages spiritual approaches to health and healing.",
+            "Promotes compassion and care ethics across faith traditions."
+        ]
+    },
+    {
+        "date": "02-03",
+        "title": "International Epilepsy Day",
+        "description": "Promotes awareness about epilepsy and its impact on people's lives.",
+        "importance": [
+            "Reduces stigma associated with seizure disorders.",
+            "Advocates for better diagnosis and treatment options."
+        ]
+    },
+    {
+        "date": "02-28",
+        "title": "Rare Disease Day",
+        "description": "Raises awareness about rare diseases and their impact on patients' lives.",
+        "importance": [
+            "Highlights challenges in diagnosis and treatment of rare conditions.",
+            "Promotes research and development of orphan drugs."
+        ]
+    },
+    {
+        "date": "03-06",
+        "title": "World Lymphedema Day",
+        "description": "Increases awareness about lymphedema and lymphatic diseases.",
+        "importance": [
+            "Educates about early detection and management strategies.",
+            "Advocates for improved insurance coverage for treatment."
+        ]
+    },
+    {
+        "date": "03-08",
+        "title": "International Women's Day",
+        "description": "Celebrates women's achievements and promotes gender equality in healthcare.",
+        "importance": [
+            "Highlights women's health issues and disparities in medical research.",
+            "Promotes women's leadership in healthcare professions."
+        ]
+    },
+    {
+        "date": "03-12",
+        "title": "World Glaucoma Day",
+        "description": "Raises awareness about glaucoma and the importance of regular eye examinations.",
+        "importance": [
+            "Promotes early detection to prevent vision loss.",
+            "Educates about treatment options for this leading cause of blindness."
+        ]
+    },
+    {
+        "date": "03-16",
+        "title": "National Sleep Awareness Day",
+        "description": "Highlights the importance of quality sleep for overall health.",
+        "importance": [
+            "Promotes understanding of sleep disorders and their impact on health.",
+            "Encourages healthy sleep habits and sleep hygiene."
+        ]
+    },
+    {
+        "date": "03-21",
+        "title": "World Down Syndrome Day",
+        "description": "Raises public awareness about Down syndrome and the importance of inclusion.",
+        "importance": [
+            "Promotes understanding of health issues common in Down syndrome.",
+            "Advocates for equitable healthcare access for people with disabilities."
+        ]
+    },
+    {
+        "date": "04-05",
+        "title": "National Alcohol Screening Day",
+        "description": "Raises awareness about alcohol misuse and encourages screening for alcohol use disorders.",
+        "importance": [
+            "Promotes early intervention for alcohol-related health problems.",
+            "Educates about the health risks of excessive alcohol consumption."
+        ]
+    },
+    {
+        "date": "04-19",
+        "title": "World Liver Day",
+        "description": "Raises awareness about liver diseases and their prevention.",
+        "importance": [
+            "Educates about risk factors for liver disease including alcohol and viral hepatitis.",
+            "Promotes liver health through proper nutrition and lifestyle choices."
+        ]
+    },
+    {
+        "date": "04-28",
+        "title": "World Day for Safety and Health at Work",
+        "description": "Promotes the prevention of occupational accidents and diseases globally.",
+        "importance": [
+            "Highlights workplace health hazards and safety protocols.",
+            "Advocates for preventive safety culture in healthcare settings."
+        ]
+    },
+    {
+        "date": "05-03",
+        "title": "World Asthma Day",
+        "description": "Increases awareness about asthma and improves care throughout the world.",
+        "importance": [
+            "Educates about asthma triggers and management strategies.",
+            "Promotes access to effective asthma medications worldwide."
+        ]
+    },
+    {
+        "date": "05-05",
+        "title": "World Hand Hygiene Day",
+        "description": "Emphasizes the importance of hand hygiene in healthcare settings.",
+        "importance": [
+            "Reduces healthcare-associated infections through proper hand hygiene.",
+            "Promotes patient safety in healthcare environments."
+        ]
+    },
+    {
+        "date": "05-19",
+        "title": "World IBD Day",
+        "description": "Raises awareness about inflammatory bowel diseases including Crohn's disease and ulcerative colitis.",
+        "importance": [
+            "Reduces stigma associated with chronic digestive disorders.",
+            "Promotes research for better treatments and potential cures."
+        ]
+    },
+    {
+        "date": "05-28",
+        "title": "World Hunger Day",
+        "description": "Highlights sustainable solutions to hunger and poverty worldwide.",
+        "importance": [
+            "Addresses malnutrition as a critical public health issue.",
+            "Promotes sustainable food systems and nutritional security."
+        ]
+    },
+    {
+        "date": "06-07",
+        "title": "World Food Safety Day",
+        "description": "Draws attention to foodborne risks and promotes safe food handling practices.",
+        "importance": [
+            "Prevents foodborne illnesses through education about proper food handling.",
+            "Promotes food safety standards in production and distribution."
+        ]
+    },
+    {
+        "date": "06-13",
+        "title": "International Albinism Awareness Day",
+        "description": "Promotes awareness and understanding of albinism and the rights of people with albinism.",
+        "importance": [
+            "Highlights specific health needs including skin cancer prevention.",
+            "Advocates for access to vision care and dermatological services."
+        ]
+    },
+    {
+        "date": "06-19",
+        "title": "World Sickle Cell Day",
+        "description": "Increases public knowledge and understanding of sickle cell disease.",
+        "importance": [
+            "Promotes early screening and diagnosis of this genetic blood disorder.",
+            "Advocates for comprehensive treatment and pain management protocols."
+        ]
+    },
+    {
+        "date": "06-27",
+        "title": "World Microbiome Day",
+        "description": "Celebrates the importance of microorganisms for human health and the environment.",
+        "importance": [
+            "Highlights the role of gut microbiota in overall health.",
+            "Promotes research into microbiome-based therapies."
+        ]
+    },
+    {
+        "date": "07-11",
+        "title": "World Population Day",
+        "description": "Focuses attention on the importance of population issues in global health.",
+        "importance": [
+            "Addresses healthcare access in rapidly growing populations.",
+            "Promotes family planning services and reproductive health education."
+        ]
+    },
+    {
+        "date": "07-22",
+        "title": "World Brain Day",
+        "description": "Increases public awareness and promotes advocacy related to brain health.",
+        "importance": [
+            "Educates about neurological disorders and their prevention.",
+            "Promotes brain-healthy lifestyles throughout the lifespan."
+        ]
+    },
+    {
+        "date": "07-24",
+        "title": "International Self-Care Day",
+        "description": "Raises awareness about the importance of self-care in maintaining health.",
+        "importance": [
+            "Promotes preventive health practices and personal health responsibility.",
+            "Encourages balanced approach to physical and mental wellbeing."
+        ]
+    },
+    {
+        "date": "07-30",
+        "title": "World Day Against Trafficking in Persons",
+        "description": "Raises awareness about human trafficking and its health consequences.",
+        "importance": [
+            "Addresses physical and mental health impacts on trafficking victims.",
+            "Promotes trauma-informed care for survivors."
+        ]
+    },
+    {
+        "date": "08-08",
+        "title": "World Physical Therapy Day",
+        "description": "Raises awareness about the crucial contribution physiotherapists make to healthcare.",
+        "importance": [
+            "Promotes rehabilitation services for injury and disability.",
+            "Highlights the role of physical activity in health maintenance."
+        ]
+    },
+    {
+        "date": "08-12",
+        "title": "International Youth Day",
+        "description": "Raises awareness about issues affecting young people including mental health.",
+        "importance": [
+            "Addresses adolescent health needs and risky behaviors.",
+            "Promotes youth engagement in health policy and education."
+        ]
+    },
+    {
+        "date": "08-19",
+        "title": "World Humanitarian Day",
+        "description": "Honors humanitarian aid workers and those who have lost their lives in humanitarian service.",
+        "importance": [
+            "Highlights emergency healthcare provision in crisis situations.",
+            "Promotes protection of healthcare workers in conflict zones."
+        ]
+    },
+    {
+        "date": "08-25",
+        "title": "World Mosquito Day",
+        "description": "Commemorates the discovery of the mosquito's role in malaria transmission.",
+        "importance": [
+            "Raises awareness about mosquito-borne diseases like malaria, dengue, and Zika.",
+            "Promotes prevention strategies including insect control measures."
+        ]
+    },
+    {
+        "date": "09-09",
+        "title": "World First Aid Day",
+        "description": "Promotes the importance of first aid training in preventing injuries and saving lives.",
+        "importance": [
+            "Encourages basic first aid skills for emergency response.",
+            "Highlights the role of immediate care in improving outcomes."
+        ]
+    },
+    {
+        "date": "09-15",
+        "title": "World Lymphoma Awareness Day",
+        "description": "Raises awareness about lymphoma and its symptoms for earlier diagnosis.",
+        "importance": [
+            "Educates about this common but often misdiagnosed blood cancer.",
+            "Promotes recognition of symptoms for early detection."
+        ]
+    },
+    {
+        "date": "09-18",
+        "title": "World Bamboo Day",
+        "description": "Promotes the use of bamboo for sustainable development and health applications.",
+        "importance": [
+            "Highlights bamboo's antimicrobial properties in medical applications.",
+            "Promotes sustainable materials for healthcare facilities."
+        ]
+    },
+    {
+        "date": "09-28",
+        "title": "World Rabies Day",
+        "description": "Raises awareness about rabies prevention and highlights progress toward eliminating human rabies deaths.",
+        "importance": [
+            "Promotes animal vaccination to prevent this deadly disease.",
+            "Educates about post-exposure prophylaxis when bites occur."
+        ]
+    },
+    {
+        "date": "10-05",
+        "title": "World Teachers' Day",
+        "description": "Recognizes the role of teachers in health education and promotion.",
+        "importance": [
+            "Highlights school-based health education programs.",
+            "Promotes teacher training in health and wellness topics."
+        ]
+    },
+    {
+        "date": "10-13",
+        "title": "World Thrombosis Day",
+        "description": "Focuses attention on the often overlooked and misunderstood condition of thrombosis.",
+        "importance": [
+            "Educates about risk factors for blood clots including travel and surgery.",
+            "Promotes awareness of symptoms requiring immediate medical attention."
+        ]
+    },
+    {
+        "date": "10-29",
+        "title": "World Stroke Day",
+        "description": "Raises awareness about the prevention and treatment of stroke.",
+        "importance": [
+            "Educates about stroke warning signs and emergency response.",
+            "Promotes risk factor management including hypertension control."
+        ]
+    },
+    {
+        "date": "11-02",
+        "title": "International Day to End Impunity for Crimes Against Journalists",
+        "description": "Highlights the role of accurate health journalism and protecting those who report on health issues.",
+        "importance": [
+            "Promotes accurate public health information dissemination.",
+            "Supports protection for journalists covering health crises."
+        ]
+    },
+    {
+        "date": "11-18",
+        "title": "World Antibiotic Awareness Week",
+        "description": "Increases awareness of antibiotic resistance and promotes responsible use of antibiotics.",
+        "importance": [
+            "Addresses the growing threat of antimicrobial resistance.",
+            "Promotes antibiotic stewardship in healthcare settings."
+        ]
+    },
+    {
+        "date": "11-21",
+        "title": "World COPD Day",
+        "description": "Raises awareness about Chronic Obstructive Pulmonary Disease and its treatment.",
+        "importance": [
+            "Promotes smoking cessation as primary prevention.",
+            "Educates about pulmonary rehabilitation and management strategies."
+        ]
+    },
+    {
+        "date": "11-25",
+        "title": "International Day for the Elimination of Violence Against Women",
+        "description": "Addresses violence against women as a major public health issue.",
+        "importance": [
+            "Highlights the physical and mental health consequences of gender-based violence.",
+            "Promotes trauma-informed healthcare for survivors."
+        ]
+    },
+    {
+        "date": "12-12",
+        "title": "Universal Health Coverage Day",
+        "description": "Promotes access to quality healthcare without financial hardship.",
+        "importance": [
+            "Advocates for healthcare as a human right for all people.",
+            "Addresses disparities in healthcare access worldwide."
+        ]
+    },
+    {
+        "date": "12-18",
+        "title": "International Migrants Day",
+        "description": "Raises awareness about the health needs of migrants and refugees.",
+        "importance": [
+            "Addresses barriers to healthcare faced by mobile populations.",
+            "Promotes culturally competent care for diverse communities."
+        ]
+    }
+    ,
+    {
+        "date": "07-28",
+        "title": "World Hepatitis Day",
+        "description": "Raises awareness about viral hepatitis and promotes prevention, diagnosis, and treatment.",
+        "importance": [
+            "Educates about the different types of hepatitis and their transmission.",
+            "Promotes vaccination and testing for hepatitis B and C."
+        ]
+    },
+    {
+        "date": "03-24",
+        "title": "World Tuberculosis Day",
+        "description": "Raises public awareness about the devastating health, social, and economic consequences of tuberculosis.",
+        "importance": [
+            "Promotes efforts to end the global TB epidemic.",
+            "Encourages early diagnosis and treatment."
+        ]
+    },
+    {
+        "date": "12-03",
+        "title": "International Day of Persons with Disabilities",
+        "description": "Promotes the rights and well-being of persons with disabilities in all spheres of society.",
+        "importance": [
+            "Raises awareness about disability issues.",
+            "Encourages inclusion and accessibility in healthcare."
+        ]
+    },
+    {
+        "date": "09-29",
+        "title": "World Heart Day",
+        "description": "Raises awareness about cardiovascular diseases and promotes heart-healthy living.",
+        "importance": [
+            "Encourages prevention and control of heart disease.",
+            "Promotes healthy lifestyle choices."
+        ]
+    },
+    {
+        "date": "11-14",
+        "title": "World Diabetes Day",
+        "description": "Raises awareness about diabetes and its impact on health.",
+        "importance": [
+            "Promotes education about diabetes prevention and management.",
+            "Encourages healthy lifestyle choices."
+        ]
+    },
+    {
+        "date": "10-10",
+        "title": "World Mental Health Day",
+        "description": "Raises awareness about mental health issues and promotes mental well-being.",
+        "importance": [
+            "Encourages open discussions about mental health.",
+            "Promotes access to mental health care."
+        ]
+    },
+    {
+        "date": "06-14",
+        "title": "World Blood Donor Day",
+        "description": "Thanks voluntary blood donors and raises awareness about the need for regular blood donations.",
+        "importance": [
+            "Promotes safe blood supplies for medical treatments and emergencies.",
+            "Educates about the life-saving importance of blood donation."
+        ]
+    }
+]

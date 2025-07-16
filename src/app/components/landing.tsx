@@ -46,7 +46,7 @@ const Landing: React.FC = () => {
 
     return (
         <>
-            <div ref={ref2} className="container mx-auto mt-20 p-8">
+            <div ref={ref2} className="container flex flex-col md:flex-row items-center justify-between text-center px-4 sm:px-8 md:px-12 lg:px-20 py-8 mt-2 md:mt-2 lg:mt-2">
                 <motion.div
                     initial="hidden"
                     animate={controls2}
@@ -85,7 +85,7 @@ const Landing: React.FC = () => {
                     </div>
                 </motion.div>
             </div>
-            <div ref={ref} className="container flex flex-col md:flex-row items-center justify-between text-center px-4 sm:px-8 md:px-12 lg:px-20 py-8 mt-2 md:mt-2 lg:mt-2 mx-auto">
+            <div ref={ref} className="container flex flex-col md:flex-row items-center justify-between text-center px-4 sm:px-8 md:px-12 lg:px-20 py-8 mt-2 md:mt-2 lg:mt-2">
                 <motion.div
                     className="landing-text"
                     initial="hidden"

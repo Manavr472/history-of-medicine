@@ -20,7 +20,7 @@ const Header: React.FC = () => {
     return (
         <div className="container flex items-center justify-between p-8 h-24 mx-auto relative z-50">
             <Link href="/" className='flex items-center space-x-2'>
-                <img src="/images/hom-logo.png" alt="Untitled-design" className="h-12" />
+                <img src="/images/hom-logo.png" alt="Logo" className="h-12" />
                 {/* <p className="text-left typographica text-4xl">ItihasaXR.</p> */}
             </Link>
             
@@ -41,9 +41,10 @@ const Header: React.FC = () => {
                             onMouseLeave={() => setIsOpen(false)}
                         >
                             <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                                <Link href="/history/preMedical" className="block minigap px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Pre Medical</Link>
-                                <Link href="/history/paraMedical" className="block minigap px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Para Medical</Link>
-                                <Link href="/history/clinical" className="block minigap px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Clinical Medical</Link>
+                                <Link href="/history/preClinical" className="block minigap px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Pre Clinical</Link>
+                                <Link href="/history/paraClinical" className="block minigap px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Para Clinical</Link>
+                                <Link href="/history/clinical" className="block minigap px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Clinical</Link>
+                                <Link href="/history/orthopaedics" className="block minigap px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700" role="menuitem">Orthopaedics</Link>
                             </div>
                         </div>
                     )}
