@@ -158,7 +158,7 @@ export default function OnThisDayPage() {
 
     return (
         <main className="max-w-4xl mx-auto my-8 p-6">
-            <h1 className="text-3xl font-bold mb-8 text-center">On This Day in Medical History</h1>
+            <h1 className="milker text-3xl font-bold mb-8 text-center">On This Day in Medical History</h1>
             
             {/* Date Navigation */}
             <div className="flex items-center justify-center mb-8 space-x-4">

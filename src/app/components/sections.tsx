@@ -15,11 +15,11 @@ export default function SectionsPanel() {
     const pathname = usePathname();
     
     return (
-        <nav className="flex flex-row gap-8 py-4 justify-center">
+        <nav className="mt-6 py-4 flex flex-row gap-8 py-4 justify-center">
             {sections.map((section) => (
                 <Link href={section.path} key={section.name} passHref>
                     <span
-                        className={`px-6 py-3 transition-colors duration-300 text-lg font-medium rounded-md
+                        className={`px-6 py-3 minigap transition-colors duration-300 text-lg font-medium rounded-md
                         ${(section.name === "Medical History" && pathname.startsWith("/history/")) || pathname === section.path 
                             ? 'border-b-2 border-green-500' 
                             : 'hover:text-green-200'}`}

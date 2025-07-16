@@ -112,7 +112,6 @@ const clinicalArticles: Article[] = [
 
 const OrthopaedicsHistoryPage: React.FC = () => {
     const [selectedArticle, setSelectedArticle] = useState<Article>(orthoArticles[0]);
-    const router = useRouter();
 
     return (
         <>

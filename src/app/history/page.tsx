@@ -1,12 +1,10 @@
 "use client"
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 
 
 const HistoryPage = () => {
-    const router = useRouter();
 
     const categories = [
         { name: 'Preclinical', path: '/history/preClinical' },
