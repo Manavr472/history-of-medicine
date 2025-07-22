@@ -8,7 +8,12 @@ interface BlogPost {
   summary?: string | null;
 }
 
-export default async function SubsectionPage({ params }: { params: { subsection: string } }) {
+interface PageProps {
+  params: Promise<{ subsection: string }>;
+
+}
+
+export default async function SubsectionPage({ params }: PageProps) {
   const { subsection } = await params;
 
   // Find the subsection and its blog posts
