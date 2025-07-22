@@ -24,32 +24,77 @@ function getFirstDayOfMonth(year: number, month: number) {
     return new Date(year, month, 1).getDay();
 }
 
+interface MedicalEvent {
+    year: number;
+    title: string;
+    description: string;
+    importance: string[];
+}
+
 export default function OnThisDayPage() {
     const [selectedDate, setSelectedDate] = useState<Date>(new Date());
-    const [medicalHistory, setMedicalHistory] = useState<Record<string, { title: string; description: string; importance: string[]; }[]>>({});
+    const [medicalHistory, setMedicalHistory] = useState<Record<string, MedicalEvent[]>>({});
     const [showCalendar, setShowCalendar] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
     
-    useEffect(() => {
-        // Transform the array data into a Record grouped by date
-        const groupedByDate = medicalHistoryData.reduce((acc, event) => {
-            const dateKey = event.date;
+    const fetchHistoricalEvents = async (date: Date) => {
+        setLoading(true);
+        setError(null);
+        
+        try {
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            console.log(`Fetching events for ${month}/${day}`); // Debug log
             
-            if (!acc[dateKey]) {
-                acc[dateKey] = [];
-            }
-            
-            // Only keep title and description
-            acc[dateKey].push({
-                title: event.title,
-                description: event.description, 
-                importance: event.importance
+            const response = await fetch(`/api/get-medical-history?month=${month}&day=${day}`, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                },
             });
             
-            return acc;
-        }, {} as Record<string, { title: string; description: string, importance: string[] }[]>);
-        
-        setMedicalHistory(groupedByDate);
-    }, []);
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+            }
+            
+            const events = await response.json();
+            
+            if (!Array.isArray(events)) {
+                throw new Error('Invalid response format: expected an array of events');
+            }
+            
+            // Validate and transform each event
+            const validatedEvents = events.map(event => ({
+                year: Number(event.year) || 0,
+                title: String(event.title || ''),
+                description: String(event.description || ''),
+                importance: Array.isArray(event.importance) ? event.importance.map(String) : []
+            }));
+            
+            // Sort events by year in descending order
+            const sortedEvents = validatedEvents.sort((a, b) => b.year - a.year);
+            const dateKey = formatDateKey(date);
+            
+            console.log(`Found ${sortedEvents.length} events for ${month}/${day}`); // Debug log
+            
+            setMedicalHistory(prev => ({
+                ...prev,
+                [dateKey]: sortedEvents
+            }));
+        } catch (error: any) {
+            const errorMessage = error?.message || 'An unexpected error occurred';
+            console.error('Error fetching historical events:', errorMessage);
+            setError(`Failed to load historical events: ${errorMessage}. Please try again.`);
+        } finally {
+            setLoading(false);
+        }
+    };
+    
+    useEffect(() => {
+        fetchHistoricalEvents(selectedDate);
+    }, [selectedDate]);
 
     const goToPreviousDay = () => {
         const prevDay = new Date(selectedDate);
@@ -92,9 +137,15 @@ export default function OnThisDayPage() {
             days.push(
                 <div
                     key={day}
-                    className={`p-2 cursor-pointer text-center relative hover:bg-gray-100 dark:hover:bg-gray-700 rounded ${
-                        isSelected ? 'bg-blue-500 text-white' : ''
-                    } ${isToday ? 'ring-2 ring-blue-300' : ''}`}
+                    className={`
+                        p-3 cursor-pointer text-center relative 
+                        rounded-lg transition-all duration-300
+                        ${isSelected 
+                            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white scale-110 shadow-lg z-10' 
+                            : 'hover:bg-gray-700/50'}
+                        ${isToday ? 'ring-2 ring-blue-400' : ''}
+                        ${hasEvents ? 'font-semibold' : 'text-gray-400 hover:text-white'}
+                    `}
                     onClick={() => {
                         setSelectedDate(date);
                         setShowCalendar(false);
@@ -102,7 +153,9 @@ export default function OnThisDayPage() {
                 >
                     {day}
                     {hasEvents && (
-                        <div className="absolute left-0 right-0 mx-auto bottom-0 w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="absolute left-1/2 -translate-x-1/2 bottom-1 flex space-x-1">
+                            <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
+                        </div>
                     )}
                 </div>
             );
@@ -157,21 +210,25 @@ export default function OnThisDayPage() {
     const events = medicalHistory[dateKey] || [];
 
     return (
-        <main className="max-w-4xl mx-auto my-8 p-6">
-            <h1 className="milker text-3xl font-bold mb-8 text-center">On This Day in Medical History</h1>
-            
-            {/* Date Navigation */}
-            <div className="flex items-center justify-center mb-8 space-x-4">
-                <button
-                    onClick={goToPreviousDay}
-                    className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors shadow-md flex items-center justify-center"
-                    title="Previous Day"
-                    aria-label="Previous Day"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
+        <main className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white py-12 px-4">
+            <div className="max-w-6xl mx-auto">
+                <h1 className="font-milker text-5xl md:text-6xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                    On This Day in Medical History
+                </h1>
+            </div>
+                
+                {/* Date Navigation */}
+                <div className="flex items-center justify-center mb-12 space-x-6">
+                    <button
+                        onClick={goToPreviousDay}
+                        className="p-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center"
+                        title="Previous Day"
+                        aria-label="Previous Day"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
                 
                 <div className="relative">
                     <button
@@ -202,19 +259,54 @@ export default function OnThisDayPage() {
             </div>
 
             {/* Events Display */}
-            <section className="mt-8">
-                {events.length > 0 ? (
-                    <div className="grid gap-6">
+            <section className="mt-12">
+                {loading ? (
+                    <div className="text-center py-16 bg-gray-800/30 rounded-2xl backdrop-blur-sm">
+                        <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mb-4"></div>
+                        <p className="text-xl text-gray-300">Discovering medical history...</p>
+                        <p className="text-sm text-gray-400 mt-2">Searching historical records for {selectedDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}</p>
+                    </div>
+                ) : error ? (
+                    <div className="text-center py-16 bg-gray-800/30 rounded-2xl backdrop-blur-sm">
+                        <div className="text-5xl mb-4">⚠️</div>
+                        <p className="text-xl text-gray-300 mb-2">{error}</p>
+                        <p className="text-sm text-gray-400 mb-4">
+                            Date: {selectedDate.toLocaleDateString('en-US', { 
+                                month: 'long', 
+                                day: 'numeric',
+                                year: 'numeric'
+                            })}
+                        </p>
+                        <button 
+                            onClick={() => fetchHistoricalEvents(selectedDate)}
+                            className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+                        >
+                            Try Again
+                        </button>
+                    </div>
+                ) : events.length > 0 ? (
+                    <div className="grid gap-8 mx-[10%]">
                         {events.map((event, idx) => (
-                            <div key={idx} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
-                                <h2 className="text-2xl font-semibold mb-3 text-green-600 dark:text-green-400">{event.title}</h2>
-                                <p className="text-gray-700 dark:text-gray-300 text-lg mb-4 leading-relaxed">{event.description}</p>
+                            <div 
+                                key={idx} 
+                                className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-700/50 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
+                            >
+                                <div className="flex items-start justify-between mb-6">
+                                    <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">{event.title}</h2>
+                                    {event.year && (
+                                        <span className="text-lg font-mono text-gray-400">{event.year}</span>
+                                    )}
+                                </div>
+                                <p className="text-gray-300 text-lg mb-6 leading-relaxed">{event.description}</p>
                                 {event.importance && event.importance.length > 0 && (
-                                    <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-md">
-                                        <h3 className="font-semibold text-sm text-gray-600 dark:text-gray-400 mb-2">Key Points:</h3>
-                                        <ul className="list-disc list-inside space-y-1">
+                                    <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-700/30">
+                                        <h3 className="font-semibold text-gray-300 mb-4">Historical Significance:</h3>
+                                        <ul className="space-y-3">
                                             {event.importance.map((point, pointIdx) => (
-                                                <li key={pointIdx} className="text-sm text-gray-600 dark:text-gray-400">{point}</li>
+                                                <li key={pointIdx} className="flex items-start space-x-3">
+                                                    <span className="text-blue-400 mt-1">•</span>
+                                                    <span className="text-gray-400">{point}</span>
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
@@ -223,10 +315,10 @@ export default function OnThisDayPage() {
                         ))}
                     </div>
                 ) : (
-                    <div className="text-center py-12">
-                        <div className="text-6xl mb-4">📅</div>
-                        <p className="text-xl text-gray-500 dark:text-gray-400">No significant medical events found for this day.</p>
-                        <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">Try selecting a different date or browse using the arrows.</p>
+                    <div className="text-center py-16 bg-gray-800/30 rounded-2xl backdrop-blur-sm">
+                        <div className="text-7xl mb-6 animate-pulse">�</div>
+                        <p className="text-2xl text-gray-300 mb-3">No medical events found for this day</p>
+                        <p className="text-gray-400">Try selecting a different date or browse using the navigation arrows</p>
                     </div>
                 )}
             </section>
