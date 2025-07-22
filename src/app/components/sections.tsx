@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const sections = [
     { name: "On This Day", path: "/onthisday" },
-    { name: "Medical History", path: "/history/preClinical" },
+    { name: "Medical History", path: "/history/preclinical" },
     { name: "Surgeons Directory", path: "/surgeoninfo" },
     { name: "Medical Timelines", path: "/timeline" },
     { name: "Did You Know?", path: "/did-you-know" },

@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Subsection {
+  id        String     @id @default(cuid())
+  slug      String     @unique
+  name      String
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  blogPosts BlogPost[]
+
+  @@map("subsections")
+}
+
+model BlogPost {
+  id           String     @id @default(cuid())
+  title        String
+  content      String
+  summary      String?
+  slug         String?
+  published    Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  subsectionId String
+  subsection   Subsection @relation(fields: [subsectionId], references: [id], onDelete: Cascade)
+
+  @@unique([subsectionId, slug])
+  @@map("blog_posts")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(VIEWER)
+  verified  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+enum Role {
+  VIEWER
+  CONTRIBUTOR
+  ADMIN
+}

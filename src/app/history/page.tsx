@@ -1,35 +1,30 @@
-"use client"
-import React from 'react';
-import Link from 'next/link';
+import { db } from "@/app/lib/firebase";
+import { collection, getDocs } from "firebase/firestore";
+import Link from "next/link";
 
+export default async function HistoryLandingPage() {
+  const historyRef = collection(db, "history");
+  const snapshot = await getDocs(historyRef);
 
+  const subsections = snapshot.docs.map((doc) => ({
+    id: doc.id,
+  }));
 
-const HistoryPage = () => {
+  return (
+    <main className="max-w-3xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-6">History of Medicine</h1>
 
-    const categories = [
-        { name: 'Preclinical', path: '/history/preClinical' },
-        { name: 'Paraclinical', path: '/history/paraClinical' },
-        { name: 'Clinical', path: '/history/clinical' },
-        { name: 'Orthopaedics', path: '/history/orthopaedics' },
-    ];
-
-    return (
-        <div className="container mx-auto px-4 py-12">
-            <h1 className="text-3xl font-bold mb-8 text-center">Medical History Categories</h1>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-                {categories.map((category) => (
-                    <Link href={category.path} key={category.name}>
-                        <button 
-                            className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300 text-lg font-medium"
-                        >
-                            {category.name}
-                        </button>
-                    </Link>
-                ))}
-            </div>
-        </div>
-    );
-};
-
-export default HistoryPage;
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {subsections.map((section) => (
+          <Link
+            key={section.id}
+            href={`/history/${section.id}`}
+            className="block p-4 bg-blue-100 hover:bg-blue-200 rounded-lg text-center text-blue-800 font-semibold shadow"
+          >
+            {section.id.charAt(0).toUpperCase() + section.id.slice(1)}
+          </Link>
+        ))}
+      </div>
+    </main>
+  );
+}
