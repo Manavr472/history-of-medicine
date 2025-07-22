@@ -3,10 +3,10 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 
 interface PageProps {
-  params: { 
+  params: Promise<{ 
     subsection: string;
     postid: string;
-  };
+  }>;
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
