@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import medicalHistoryData from './onthisday.json'; // Adjust path as needed
+
 
 function formatDateKey(date: Date) {
     const mm = String(date.getMonth() + 1).padStart(2, '0');

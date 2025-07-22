@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from './providers'
 import { AuthProvider } from './context/AuthContext'
-import SectionsPanel from "./components/sections";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import ThemeSwitch from "./components/ThemeSwitch";
@@ -22,7 +21,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Itihasa XR",
+  title: "HoMe",
   description: "Experience the past like never before",
 };
 
