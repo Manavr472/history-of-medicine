@@ -5,11 +5,11 @@ const Footer: React.FC = () => {
         <footer className='relative mt-20' style={{ padding: '20px', textAlign: 'center'}}>
             <hr/>
             <br />
-            <p>&copy; 2024 Itihasa XR. All rights reserved.</p>
+            <p>&copy; 2025 History Of Medicine. All rights reserved.</p>
             <nav>
-                <a href="/privacy-policy" style={{ margin: '0 10px' }}>Privacy Policy</a>
-                <a href="/terms-of-service" style={{ margin: '0 10px' }}>Terms of Service</a>
-                <a href="/contact-us" style={{ margin: '0 10px' }}>Contact Us</a>
+                <a href="/privacy_policy" style={{ margin: '0 10px' }}>Privacy Policy</a>
+                <a href="/terms_of_service" style={{ margin: '0 10px' }}>Terms of Service</a>
+                <a href="/disclaimer" style={{ margin: '0 10px' }}>Disclaimer</a>
             </nav>
         </footer>
     );

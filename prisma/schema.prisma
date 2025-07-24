@@ -8,48 +8,155 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model HistorySection {
+  id           String        @id @default(cuid())
+  slug         String        @unique
+  name         String
+  description  String?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  subsections  Subsection[]
+
+  @@map("history_sections")
+}
+
 model Subsection {
-  id        String     @id @default(cuid())
-  slug      String     @unique
-  name      String
-  createdAt DateTime   @default(now())
-  updatedAt DateTime   @updatedAt
-  blogPosts BlogPost[]
+  id               String         @id @default(cuid())
+  slug             String         @unique
+  name             String
+  description      String?
+  historySectionId String
+  historySection   HistorySection @relation(fields: [historySectionId], references: [id], onDelete: Cascade)
+  
+  // Self-referencing relation for nested subsections
+  parentId         String?        // Optional parent subsection ID
+  parent           Subsection?    @relation("SubsectionHierarchy", fields: [parentId], references: [id], onDelete: Cascade)
+  children         Subsection[]   @relation("SubsectionHierarchy")
+  
+  // Nested level for easier querying (0 = top level, 1 = first child, etc.)
+  level            Int            @default(0)
+  
+  // Flag to indicate if this subsection can have blog posts (leaf nodes only)
+  isLeaf           Boolean        @default(true)
+  
+  // Only leaf subsections (those without children) can have blog posts
+  blogPosts        BlogPost[]
+  
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
 
   @@map("subsections")
 }
 
 model BlogPost {
-  id           String     @id @default(cuid())
+  id           String     @id // Will be slug-based like "history_of_knee_replacement"
   title        String
   content      String
   summary      String?
-  slug         String?
-  published    Boolean    @default(true)
+  slug         String?    // Remove unique constraint for now
+  published    Boolean    @default(false) // Changed default to false for moderation
+  status       PostStatus @default(DRAFT) // New field for workflow management
+  authorId     String?    // New field to track who submitted the post
+  author       User?      @relation(fields: [authorId], references: [id], onDelete: SetNull)
+  images       PostImage[] // New relation for multiple images
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
+  publishedAt  DateTime?  // New field to track when post was published
+  submittedAt  DateTime?  // New field to track when post was submitted for review
   subsectionId String
   subsection   Subsection @relation(fields: [subsectionId], references: [id], onDelete: Cascade)
 
-  @@unique([subsectionId, slug])
   @@map("blog_posts")
 }
 
+model PostImage {
+  id         String   @id @default(cuid())
+  filename   String   // Original filename
+  path       String   // File path in storage
+  alt        String?  // Alt text for accessibility
+  caption    String?  // Optional caption
+  size       Int      // File size in bytes
+  mimeType   String   // MIME type (image/jpeg, image/png, etc.)
+  blogPostId String
+  blogPost   BlogPost @relation(fields: [blogPostId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
+
+  @@map("post_images")
+}
+
 model User {
-  id        String   @id @default(cuid())
-  name      String
-  email     String   @unique
-  password  String
-  role      Role     @default(VIEWER)
-  verified  Boolean  @default(false)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id                    String     @id @default(cuid())
+  name                  String?
+  email                 String     @unique
+  emailVerified         DateTime?
+  image                 String?
+  password              String?
+  role                  Role       @default(VIEWER)
+  verified              Boolean    @default(false)
+  emailVerificationToken String?   @unique
+  emailVerifiedAt       DateTime?
+  blogPosts             BlogPost[] // New relation to track user's submitted posts
+  createdAt             DateTime   @default(now())
+  updatedAt             DateTime   @updatedAt
+  
+  // NextAuth relations
+  accounts              Account[]
+  sessions              Session[]
 
   @@map("users")
+}
+
+// NextAuth models
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
 }
 
 enum Role {
   VIEWER
   CONTRIBUTOR
   ADMIN
+}
+
+enum PostStatus {
+  DRAFT
+  SUBMITTED
+  UNDER_REVIEW
+  APPROVED
+  PUBLISHED
+  REJECTED
 }

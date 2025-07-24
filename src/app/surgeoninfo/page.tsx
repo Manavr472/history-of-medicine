@@ -98,7 +98,7 @@ const SurgeonInfo: React.FC = () => {
 
     return (
       <div className="container mx-auto p-8">
-        <h2 className="milker text-4xl font-bold mb-8 text-center">Surgeon Information</h2>
+        <h2 className="milker text-4xl font-bold mb-8 text-center">Surgeon Directory</h2>
         {surgeons.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {surgeons.map((surgeon, index) => (

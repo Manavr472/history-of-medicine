@@ -29,7 +29,7 @@ export async function GET(request: Request) {
         ];
 
         const monthName = monthNames[parseInt(month) - 1];
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite-preview-06-17' });
+        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-pro' });
         
         const prompt = `As a medical historian, provide 2-3 significant historical medical events, discoveries, or breakthroughs that occurred on ${monthName} ${day} throughout history. Focus on:
         - Major medical discoveries

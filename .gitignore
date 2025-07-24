@@ -31,6 +31,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+credentials.json
 
 # vercel
 .vercel
@@ -42,3 +43,8 @@ next-env.d.ts
 .vercel
 
 /src/generated/prisma
+
+# Prisma
+/prisma/generated/
+/src/generated/
+node_modules/.prisma/

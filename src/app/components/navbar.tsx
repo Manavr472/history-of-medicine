@@ -21,7 +21,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="minigap hidden md:flex space-x-6 items-center">
-            <Link href="/directory" className="text-neutral-800 dark:text-neutral-100 hover:text-green-600 dark:hover:text-green-500 transition-colors">Directory</Link>
+            <Link href="/surgeoninfo" className="text-neutral-800 dark:text-neutral-100 hover:text-green-600 dark:hover:text-green-500 transition-colors">Directory</Link>
             <Link href="/timelines" className="text-neutral-800 dark:text-neutral-100 hover:text-green-600 dark:hover:text-green-500 transition-colors">Timelines</Link>
             <Link href="/days" className="text-neutral-800 dark:text-neutral-100 hover:text-green-600 dark:hover:text-green-500 transition-colors">Medical Days</Link>
             <Link href="/did-you-know" className="text-neutral-800 dark:text-neutral-100 hover:text-green-600 dark:hover:text-green-500 transition-colors">Did You Know?</Link>
@@ -38,9 +38,11 @@ export default function Navbar() {
               </button>
               {historyDropdown && (
                 <div className="minigap absolute w-40 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded shadow-lg">
-                  <Link href="/history/preclinical" className="block px-4 py-2 hover:bg-green-50 dark:hover:bg-green-900 transition-colors">Preclinical</Link>
+                  <Link href="/history" className="block px-4 py-2 hover:bg-green-50 dark:hover:bg-green-900 transition-colors font-medium">All Sections</Link>
+                  <div className="border-t border-neutral-200 dark:border-neutral-800"></div>
+                  <Link href="/history/preclinical" className="block px-4 py-2 hover:bg-green-50 dark:hover:bg-green-900 transition-colors">Pre-Clinical</Link>
+                  <Link href="/history/paraclinical" className="block px-4 py-2 hover:bg-green-50 dark:hover:bg-green-900 transition-colors">Para-Clinical</Link>
                   <Link href="/history/clinical" className="block px-4 py-2 hover:bg-green-50 dark:hover:bg-green-900 transition-colors">Clinical</Link>
-                  <Link href="/history/paraclinical" className="block px-4 py-2 hover:bg-green-50 dark:hover:bg-green-900 transition-colors">Paraclinical</Link>
                 </div>
               )}
             </div>
@@ -62,6 +64,10 @@ export default function Navbar() {
                       <div className="text-xs text-neutral-500 dark:text-neutral-400">{user.email}</div>
                     </div>
                     <Link href="/profile" className="block px-4 py-2 hover:bg-green-50 dark:hover:bg-green-900 transition-colors">Profile</Link>
+                    <Link href="/create-blog" className="block px-4 py-2 hover:bg-green-50 dark:hover:bg-green-900 transition-colors">Create Blog</Link>
+                    {user.role === 'ADMIN' && (
+                      <Link href="/admin" className="block px-4 py-2 hover:bg-green-50 dark:hover:bg-green-900 transition-colors text-blue-600 dark:text-blue-400">Admin Dashboard</Link>
+                    )}
                     <button 
                       onClick={logout}
                       className="w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900 text-red-600 dark:text-red-400 transition-colors flex items-center"
@@ -99,9 +105,10 @@ export default function Navbar() {
           <Link href="/infographics" className="block px-4 py-2 text-neutral-800 dark:text-neutral-100 hover:text-green-600 dark:hover:text-green-500 transition-colors">Infographics</Link>
           <div className="px-4 py-2">
             <div className="minigap font-semibold text-neutral-800 dark:text-neutral-100">History</div>
-            <Link href="/history/preclinical" className="block pl-4 py-1 hover:text-green-600 dark:hover:text-green-500 transition-colors">Preclinical</Link>
+            <Link href="/history" className="block pl-4 py-1 hover:text-green-600 dark:hover:text-green-500 transition-colors font-medium">All Sections</Link>
+            <Link href="/history/preclinical" className="block pl-4 py-1 hover:text-green-600 dark:hover:text-green-500 transition-colors">Pre-Clinical</Link>
+            <Link href="/history/paraclinical" className="block pl-4 py-1 hover:text-green-600 dark:hover:text-green-500 transition-colors">Para-Clinical</Link>
             <Link href="/history/clinical" className="block pl-4 py-1 hover:text-green-600 dark:hover:text-green-500 transition-colors">Clinical</Link>
-            <Link href="/history/paraclinical" className="block pl-4 py-1 hover:text-green-600 dark:hover:text-green-500 transition-colors">Paraclinical</Link>
           </div>
           {user ? (
             <>
@@ -110,6 +117,10 @@ export default function Navbar() {
                 <div className="text-xs text-neutral-500 dark:text-neutral-400">{user.email}</div>
               </div>
               <Link href="/profile" className="block px-4 py-2 text-neutral-800 dark:text-neutral-100 hover:text-green-600 dark:hover:text-green-500 transition-colors">Profile</Link>
+              <Link href="/create-blog" className="block px-4 py-2 text-neutral-800 dark:text-neutral-100 hover:text-green-600 dark:hover:text-green-500 transition-colors">Create Blog</Link>
+              {user.role === 'ADMIN' && (
+                <Link href="/admin" className="block px-4 py-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">Admin Dashboard</Link>
+              )}
               <button 
                 onClick={logout}
                 className="w-full text-left px-4 py-2 text-red-600 dark:text-red-400 hover:underline flex items-center"
